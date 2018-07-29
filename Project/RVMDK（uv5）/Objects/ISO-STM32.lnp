@@ -1,5 +1,5 @@
 --cpu Cortex-M3
-".\objects\startup_stm32f10x_hd.o"
+".\objects\startup_stm32f10x_xl.o"
 ".\objects\core_cm3.o"
 ".\objects\system_stm32f10x.o"
 ".\objects\misc.o"
@@ -30,6 +30,7 @@
 ".\objects\os_app_hooks.o"
 ".\objects\bsp.o"
 ".\objects\bsp_led.o"
+".\objects\powermanage.o"
 ".\objects\cpu_core.o"
 ".\objects\cpu_a.o"
 ".\objects\cpu_c.o"

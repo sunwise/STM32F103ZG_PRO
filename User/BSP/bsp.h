@@ -76,6 +76,8 @@
 #include  <app_cfg.h>
 
 #include "bsp_led.h"           // Modified by fire (没有使用评估板的板载驱动，使用自己的裸机板载驱动文件)
+#include "PowerManage.h" 
+
 
 
 /*

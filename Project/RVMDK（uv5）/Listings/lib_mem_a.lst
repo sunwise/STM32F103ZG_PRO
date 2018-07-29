@@ -447,7 +447,7 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\objects\lib_mem_a.d -o.\objects\lib_mem_a.o -I.\RTE\____________
 LED -ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include -ID:\Keil_v5\
 ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSIO
-N SETA 523" --predefine="STM32F10X_HD SETA 1" --list=.\listings\lib_mem_a.lst .
+N SETA 523" --predefine="STM32F10X_XL SETA 1" --list=.\listings\lib_mem_a.lst .
 .\..\User\uC-LIB\Ports\ARM-Cortex-M3\RealView\lib_mem_a.asm
 
 

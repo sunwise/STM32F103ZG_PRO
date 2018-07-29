@@ -161,6 +161,7 @@ CPU_INT32U  BSP_CPU_ClkFreq_MHz;
 void  BSP_Init (void)
 {
 	LED_Init (); 
+	Powermanage_Init ( );
 	
 }
 
