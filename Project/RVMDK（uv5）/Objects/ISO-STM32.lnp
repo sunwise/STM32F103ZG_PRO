@@ -31,6 +31,7 @@
 ".\objects\bsp.o"
 ".\objects\bsp_led.o"
 ".\objects\powermanage.o"
+".\objects\keys.o"
 ".\objects\cpu_core.o"
 ".\objects\cpu_a.o"
 ".\objects\cpu_c.o"

@@ -162,6 +162,7 @@ void  BSP_Init (void)
 {
 	LED_Init (); 
 	Powermanage_Init ( );
+	Keys_Init();
 	
 }
 

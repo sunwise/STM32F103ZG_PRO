@@ -121,6 +121,8 @@ int main(void)
 *				   used.  The compiler should not generate any code for this statement.
 *********************************************************************************************************
 */
+CPU_INT32U  count = 0;
+
 static void AppTaskStart(void * p_arg)
 {
 	CPU_INT32U		cpu_clk_freq;
@@ -150,7 +152,8 @@ static void AppTaskStart(void * p_arg)
 	while (DEF_TRUE)
 		{ /* Task body, always written as an infinite loop. 	  */
 		macLED1_TOGGLE();
-		OSTimeDly(5000, OS_OPT_TIME_DLY, &err);
+		count ++;
+		OSTimeDly(1000, OS_OPT_TIME_DLY, &err);
 		}
 
 

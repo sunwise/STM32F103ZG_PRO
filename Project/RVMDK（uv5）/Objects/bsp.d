@@ -44,3 +44,4 @@
 .\objects\bsp.o: ..\..\User\APP\app_cfg.h
 .\objects\bsp.o: ..\..\User\BSP\led\bsp_led.h
 .\objects\bsp.o: ..\..\User\BSP\PowerManage\PowerManage.h
+.\objects\bsp.o: ..\..\User\BSP\key\keys.h
