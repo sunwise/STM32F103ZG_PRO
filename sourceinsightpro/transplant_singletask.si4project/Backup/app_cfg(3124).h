@@ -48,8 +48,6 @@
 */
 
 #define  APP_TASK_START_PRIO                        2
-#define  KEY_DEAL_TASK_PRIO                         4
-
 
 
 /*
@@ -60,7 +58,6 @@
 */
 
 #define  APP_TASK_START_STK_SIZE                    128
-#define  KEY_DEAL_TASK_STK_SIZE                     128
 
 
 /*

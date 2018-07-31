@@ -177,66 +177,12 @@ void KeyDeal(char * keyvalue,OS_ERR * p_err)
 			break;
 
 		case '3':
-			if(enternumber[1])
-				{
-				tickend[1] = OSTimeGet(p_err);
-				if(tickend[1] > tickstart[1])
-					{
-					pushtime[1] = tickend[1] - tickstart[1];
-					}
-				else
-					{
-					pushtime[1] = tickend[1] + (0xFFFFFFFF - tickstart[1]);
-					}
-				enternumber[1] = 0;
-				}
-			else
-				{
-				tickstart[1] = OSTimeGet(p_err);
-				enternumber[1] = 1;
-				}
 			break;
 
 		case '4':
-			if(enternumber[2])
-				{
-				tickend[2] = OSTimeGet(p_err);
-				if(tickend[2] > tickstart[2])
-					{
-					pushtime[2] = tickend[2] - tickstart[2];
-					}
-				else
-					{
-					pushtime[2] = tickend[2] + (0xFFFFFFFF - tickstart[2]);
-					}
-				enternumber[2] = 0;
-				}
-			else
-				{
-				tickstart[2] = OSTimeGet(p_err);
-				enternumber[2] = 1;
-				}
 			break;
 
 		case '5':
-			if(enternumber[3])
-				{
-				tickend[3] = OSTimeGet(p_err);
-				if(tickend[3] > tickstart[3])
-					{
-					pushtime[3] = tickend[3] - tickstart[3];
-					}
-				else
-					{
-					pushtime[3] = tickend[3] + (0xFFFFFFFF - tickstart[3]);
-					}
-				enternumber[3] = 0;
-				}
-			else
-				{
-				tickstart[3] = OSTimeGet(p_err);
-				enternumber[3] = 1;
-				}
 			break;
 
 		default:

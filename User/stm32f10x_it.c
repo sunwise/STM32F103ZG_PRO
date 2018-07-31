@@ -163,11 +163,7 @@ void SysTick_Handler(void)
   */
 void EXTI0_IRQHandler(void)
 {
-	if (EXTI_GetITStatus(EXTI_Line0) != RESET) //这里为判断相应的中断号是否进入中断，如果有多个中断的话。
-		{
-		EXTI_ClearITPendingBit(EXTI_Line0); 		//清中断
-
-		}
+	KEY3_IRQ_DEAL();
 
 }
 
@@ -179,11 +175,8 @@ void EXTI0_IRQHandler(void)
   */
 void EXTI1_IRQHandler(void)
 {
-	if (EXTI_GetITStatus(EXTI_Line1) != RESET) //这里为判断相应的中断号是否进入中断，如果有多个中断的话。
-		{
-		EXTI_ClearITPendingBit(EXTI_Line1); 		//清中断
+	KEY4_IRQ_DEAL();
 
-		}
 
 }
 
@@ -195,11 +188,8 @@ void EXTI1_IRQHandler(void)
   */
 void EXTI3_IRQHandler(void)
 {
-	if (EXTI_GetITStatus(EXTI_Line3) != RESET) //这里为判断相应的中断号是否进入中断，如果有多个中断的话。
-		{
-		EXTI_ClearITPendingBit(EXTI_Line3); 		//清中断
+	KEY5_IRQ_DEAL();
 
-		}
 
 }
 
@@ -211,11 +201,8 @@ void EXTI3_IRQHandler(void)
   */
 void EXTI9_5_IRQHandler(void)
 {
-	if (EXTI_GetITStatus(EXTI_Line5) != RESET) //这里为判断相应的中断号是否进入中断，如果有多个中断的话。
-		{
-		EXTI_ClearITPendingBit(EXTI_Line5); 		//清中断
+	KEY2_IRQ_DEAL();
 
-		}
 
 }
 

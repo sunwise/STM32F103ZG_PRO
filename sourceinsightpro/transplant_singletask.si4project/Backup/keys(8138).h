@@ -3,8 +3,7 @@
 
 
 
-#include <includes.h>
-#include <os.h>
+#include "stm32f10x.h"
 
 
 #define             KEY2_GPIO_CLK                        RCC_APB2Periph_GPIOC
@@ -43,35 +42,9 @@
 #define             KEY5_EXTI_Line                       EXTI_Line3
 #define             KEY5_IRQChannel                      EXTI3_IRQn
 
-/*
-*********************************************************************************************************
-*												  TCB
-*********************************************************************************************************
-*/
-extern OS_TCB	KeyDealTaskTCB;
-
-
-/*
-*********************************************************************************************************
-*												 STACKS
-*********************************************************************************************************
-*/
-extern CPU_STK	KeyDealTaskStk[APP_TASK_START_STK_SIZE];
-
-
-/*
-*********************************************************************************************************
-*										  FUNCTION PROTOTYPES
-*********************************************************************************************************
-*/
-extern void KeyDealTask(void * p_arg);
-
 
 void Keys_Init ( void );
-void KEY2_IRQ_DEAL(void);
-void KEY3_IRQ_DEAL(void);
-void KEY4_IRQ_DEAL(void);
-void KEY5_IRQ_DEAL(void);
 
-
+ 
+ 
 #endif 

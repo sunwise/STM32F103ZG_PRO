@@ -7,7 +7,7 @@
 *												  TCB
 *********************************************************************************************************
 */
-OS_TCB			KeyDealTaskTCB;
+OS_TCB	KeyDealTaskTCB;
 
 
 /*
@@ -15,7 +15,7 @@ OS_TCB			KeyDealTaskTCB;
 *												 STACKS
 *********************************************************************************************************
 */
-CPU_STK 		KeyDealTaskStk[APP_TASK_START_STK_SIZE];
+CPU_STK	KeyDealTaskStk[APP_TASK_START_STK_SIZE];
 
 
 /*
@@ -144,133 +144,25 @@ void Keys_Init(void)
 	Keys_GPIO_Config();
 }
 
-
-void KeyDeal(char * keyvalue,OS_ERR * p_err)
-{
-	static OS_TICK 		tickstart[4];
-	static OS_TICK 		tickend[4];
-	static CPU_INT08U      enternumber[4]={0,0,0,0};
-	static CPU_INT08U      pushtime[4];
-
-	switch (keyvalue[0])
-		{
-		case '2':
-			if(enternumber[0])
-				{
-				tickend[0] = OSTimeGet(p_err);
-				if(tickend[0] > tickstart[0])
-					{
-					pushtime[0] = tickend[0] - tickstart[0];
-					}
-				else
-					{
-					pushtime[0] = tickend[0] + (0xFFFFFFFF - tickstart[0]);
-					}
-				enternumber[0] = 0;
-				}
-			else
-				{
-				tickstart[0] = OSTimeGet(p_err);
-				enternumber[0] = 1;
-				}
-			
-			break;
-
-		case '3':
-			if(enternumber[1])
-				{
-				tickend[1] = OSTimeGet(p_err);
-				if(tickend[1] > tickstart[1])
-					{
-					pushtime[1] = tickend[1] - tickstart[1];
-					}
-				else
-					{
-					pushtime[1] = tickend[1] + (0xFFFFFFFF - tickstart[1]);
-					}
-				enternumber[1] = 0;
-				}
-			else
-				{
-				tickstart[1] = OSTimeGet(p_err);
-				enternumber[1] = 1;
-				}
-			break;
-
-		case '4':
-			if(enternumber[2])
-				{
-				tickend[2] = OSTimeGet(p_err);
-				if(tickend[2] > tickstart[2])
-					{
-					pushtime[2] = tickend[2] - tickstart[2];
-					}
-				else
-					{
-					pushtime[2] = tickend[2] + (0xFFFFFFFF - tickstart[2]);
-					}
-				enternumber[2] = 0;
-				}
-			else
-				{
-				tickstart[2] = OSTimeGet(p_err);
-				enternumber[2] = 1;
-				}
-			break;
-
-		case '5':
-			if(enternumber[3])
-				{
-				tickend[3] = OSTimeGet(p_err);
-				if(tickend[3] > tickstart[3])
-					{
-					pushtime[3] = tickend[3] - tickstart[3];
-					}
-				else
-					{
-					pushtime[3] = tickend[3] + (0xFFFFFFFF - tickstart[3]);
-					}
-				enternumber[3] = 0;
-				}
-			else
-				{
-				tickstart[3] = OSTimeGet(p_err);
-				enternumber[3] = 1;
-				}
-			break;
-
-		default:
-			break;
-		}
-
-}
-
-
-CPU_TS			count11;
-
-
 void KeyDealTask(void * p_arg)
 {
-	CPU_TS			ptime;
-	OS_MSG_SIZE 	msize;
+	CPU_TS         ptime;
+	OS_MSG_SIZE    msize;
 	OS_ERR			err;
-	char *			pMsg;
-	
 
 	(void)
 	p_arg;
-
-	while (DEF_TRUE)
+	while(DEF_TRUE)
 		{
-		pMsg				= OSTaskQPend((OS_TICK) 0, 
+		OSTaskQPend(
+			(OS_TICK) 0, 
 			(OS_OPT) OS_OPT_PEND_BLOCKING, 
 			(OS_MSG_SIZE *) &msize, 
 			(CPU_TS *) &ptime, 
 			(OS_ERR *) &err);
-
-		if (err == OS_ERR_NONE)
+		if(err == OS_ERR_NONE)
 			{
-			KeyDeal(pMsg,&err);
+			ptime = 0;
 			}
 		}
 
@@ -280,86 +172,62 @@ void KeyDealTask(void * p_arg)
 void KEY2_IRQ_DEAL(void)
 {
 	OS_ERR			err;
-
-	OSIntEnter();
+	
+	OSIntEnter ();
 
 	if (EXTI_GetITStatus(KEY2_EXTI_Line) != RESET) //这里为判断相应的中断号是否进入中断，如果有多个中断的话。
 		{
 		EXTI_ClearITPendingBit(KEY2_EXTI_Line); 	//清中断
-		OSTaskQPost((OS_TCB *) & (KeyDealTaskTCB), 
-			"2", 
-			(OS_MSG_SIZE) sizeof("2"), 
+		OSTaskQPost(
+			(OS_TCB *) &(KeyDealTaskTCB), 
+			 "1", 
+			(OS_MSG_SIZE) sizeof("1"), 
 			(OS_OPT) OS_OPT_POST_FIFO, 
 			(OS_ERR *) &err);
 		}
-
-	OSIntExit();
+	OSIntExit ();
 
 }
 
 
 void KEY3_IRQ_DEAL(void)
 {
-	OS_ERR			err;
-
-	OSIntEnter();
+	OSIntEnter ();
 
 	if (EXTI_GetITStatus(KEY3_EXTI_Line) != RESET) //这里为判断相应的中断号是否进入中断，如果有多个中断的话。
 		{
 		EXTI_ClearITPendingBit(KEY3_EXTI_Line); 	//清中断
-		OSTaskQPost((OS_TCB *) & (KeyDealTaskTCB), 
-			"3", 
-			(OS_MSG_SIZE) sizeof("3"), 
-			(OS_OPT) OS_OPT_POST_FIFO, 
-			(OS_ERR *) &err);
 
 		}
-
-	OSIntExit();
+	OSIntExit ();
 
 }
 
 
 void KEY4_IRQ_DEAL(void)
 {
-	OS_ERR			err;
-
-	OSIntEnter();
+	OSIntEnter ();
 
 	if (EXTI_GetITStatus(KEY4_EXTI_Line) != RESET) //这里为判断相应的中断号是否进入中断，如果有多个中断的话。
 		{
 		EXTI_ClearITPendingBit(KEY4_EXTI_Line); 	//清中断
-		OSTaskQPost((OS_TCB *) & (KeyDealTaskTCB), 
-			"4", 
-			(OS_MSG_SIZE) sizeof("4"), 
-			(OS_OPT) OS_OPT_POST_FIFO, 
-			(OS_ERR *) &err);
 
 		}
-
-	OSIntExit();
+	OSIntExit ();
 
 }
 
 
 void KEY5_IRQ_DEAL(void)
 {
-	OS_ERR			err;
-
-	OSIntEnter();
+	OSIntEnter ();
 
 	if (EXTI_GetITStatus(KEY5_EXTI_Line) != RESET) //这里为判断相应的中断号是否进入中断，如果有多个中断的话。
 		{
 		EXTI_ClearITPendingBit(KEY5_EXTI_Line); 	//清中断
-		OSTaskQPost((OS_TCB *) & (KeyDealTaskTCB), 
-			"5", 
-			(OS_MSG_SIZE) sizeof("5"), 
-			(OS_OPT) OS_OPT_POST_FIFO, 
-			(OS_ERR *) &err);
 
 		}
-
-	OSIntExit();
+	OSIntExit ();
 
 }
 

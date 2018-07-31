@@ -45,3 +45,12 @@
 .\objects\bsp.o: ..\..\User\BSP\led\bsp_led.h
 .\objects\bsp.o: ..\..\User\BSP\PowerManage\PowerManage.h
 .\objects\bsp.o: ..\..\User\BSP\key\keys.h
+.\objects\bsp.o: ..\..\User\APP\includes.h
+.\objects\bsp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\bsp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\bsp.o: ..\..\User\uC-LIB\lib_math.h
+.\objects\bsp.o: ..\..\User\BSP\bsp.h
+.\objects\bsp.o: ..\..\User\uCOS-III\Source\os.h
+.\objects\bsp.o: ..\..\User\APP\os_cfg.h
+.\objects\bsp.o: ..\..\User\uCOS-III\Source\os_type.h
+.\objects\bsp.o: ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h

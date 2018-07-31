@@ -95,7 +95,7 @@ int main(void)
 		(CPU_STK *) &AppTaskStartStk[0], 
 		(CPU_STK_SIZE) APP_TASK_START_STK_SIZE / 10, 
 		(CPU_STK_SIZE) APP_TASK_START_STK_SIZE, 
-		(OS_MSG_QTY) 5u, 
+		(OS_MSG_QTY) 0u, 
 		(OS_TICK) 0u, 
 		(void *) 0, 
 		(OS_OPT) (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
@@ -147,6 +147,20 @@ static void AppTaskStart(void * p_arg)
 #endif
 
 	CPU_IntDisMeasMaxCurReset();
+
+	OSTaskCreate((OS_TCB *) &KeyDealTaskTCB,		/* Create the start task								*/
+		(CPU_CHAR *) "key deal task", 
+			(OS_TASK_PTR) KeyDealTask, 
+			(void *) 0, 
+			(OS_PRIO) KEY_DEAL_TASK_PRIO, 
+			(CPU_STK *) &KeyDealTaskStk[0], 
+			(CPU_STK_SIZE) KEY_DEAL_TASK_STK_SIZE / 10, 
+			(CPU_STK_SIZE) KEY_DEAL_TASK_STK_SIZE, 
+			(OS_MSG_QTY) 20u, 
+			(OS_TICK) 0u, 
+			(void *) 0, 
+			(OS_OPT) (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
+			(OS_ERR *) &err);
 
 
 	while (DEF_TRUE)
