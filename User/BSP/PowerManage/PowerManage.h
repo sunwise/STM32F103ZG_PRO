@@ -3,7 +3,7 @@
 
 
 
-#include "stm32f10x.h"
+#include <includes.h>
 
 #define             KILL_GPIO_APBxClock_FUN              RCC_APB2PeriphClockCmd
 #define             KILL_GPIO_CLK                        RCC_APB2Periph_GPIOE

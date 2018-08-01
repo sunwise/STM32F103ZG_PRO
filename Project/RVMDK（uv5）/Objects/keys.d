@@ -49,6 +49,7 @@
 .\objects\keys.o: ..\..\User\APP\app_cfg.h
 .\objects\keys.o: ..\..\User\BSP\led\bsp_led.h
 .\objects\keys.o: ..\..\User\BSP\PowerManage\PowerManage.h
+.\objects\keys.o: ..\..\User\APP\includes.h
 .\objects\keys.o: ..\..\User\BSP\key\keys.h
 .\objects\keys.o: ..\..\User\uCOS-III\Source\os.h
 .\objects\keys.o: ..\..\User\APP\os_cfg.h

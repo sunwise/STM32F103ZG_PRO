@@ -48,8 +48,8 @@
 .\objects\app.o: ..\..\User\APP\app_cfg.h
 .\objects\app.o: ..\..\User\BSP\led\bsp_led.h
 .\objects\app.o: ..\..\User\BSP\PowerManage\PowerManage.h
-.\objects\app.o: ..\..\User\BSP\key\keys.h
 .\objects\app.o: ..\..\User\APP\includes.h
+.\objects\app.o: ..\..\User\BSP\key\keys.h
 .\objects\app.o: ..\..\User\uCOS-III\Source\os.h
 .\objects\app.o: ..\..\User\APP\os_cfg.h
 .\objects\app.o: ..\..\User\uCOS-III\Source\os_type.h

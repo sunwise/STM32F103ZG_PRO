@@ -157,6 +157,7 @@ void KeyDeal(char * keyvalue,OS_ERR * p_err)
 		case '2':
 			if(enternumber[0])
 				{
+				//free
 				tickend[0] = OSTimeGet(p_err);
 				if(tickend[0] > tickstart[0])
 					{
@@ -170,6 +171,7 @@ void KeyDeal(char * keyvalue,OS_ERR * p_err)
 				}
 			else
 				{
+				//push
 				tickstart[0] = OSTimeGet(p_err);
 				enternumber[0] = 1;
 				}
