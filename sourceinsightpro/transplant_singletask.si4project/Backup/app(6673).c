@@ -183,13 +183,10 @@ static void AppTaskStart(void * p_arg)
 
 	while (DEF_TRUE)
 		{ /* Task body, always written as an infinite loop. 	  */
-		SRAM_ReadBuffer(&count1, 2000, 1);
-			if(count1 == count)
-			{
+		SRAM_ReadBuffer(&count1, 0x68000020, 1);
 		macLED1_TOGGLE();
-			}
 		count ++;
-		SRAM_WriteBuffer(&count, 2000, 1);
+		SRAM_WriteBuffer(&count, 0x68000020, 1);
 		OSTimeDly(1000, OS_OPT_TIME_DLY, &err);
 		}
 

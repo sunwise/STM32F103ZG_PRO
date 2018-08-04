@@ -55,3 +55,4 @@
 .\objects\powermanage.o: ..\..\User\APP\os_cfg.h
 .\objects\powermanage.o: ..\..\User\uCOS-III\Source\os_type.h
 .\objects\powermanage.o: ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h
+.\objects\powermanage.o: ..\..\User\BSP\ExRam\exram.h

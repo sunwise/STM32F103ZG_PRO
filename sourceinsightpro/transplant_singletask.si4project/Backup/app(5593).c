@@ -81,13 +81,12 @@ static void AppTaskStart(void * p_arg);
 * Returns	  : none
 *********************************************************************************************************
 */
-
+__IO uint32_t TabAddr, MSPValue = 0;
 int main(void)
 {
 	OS_ERR			err;
 
-	SRAM_Init();
-	
+
 	OSInit(&err);									/* Init uC/OS-III.										*/
 	OSTaskCreate((OS_TCB *) &AppTaskStartTCB,		/* Create the start task								*/
 	(CPU_CHAR *) "App Task Start", 
@@ -123,9 +122,7 @@ int main(void)
 *				   used.  The compiler should not generate any code for this statement.
 *********************************************************************************************************
 */
-CPU_INT16U  count = 0;
-CPU_INT16U  count1 = 0;
-
+CPU_INT32U  count = 0;
 
 static void AppTaskStart(void * p_arg)
 {
@@ -183,13 +180,8 @@ static void AppTaskStart(void * p_arg)
 
 	while (DEF_TRUE)
 		{ /* Task body, always written as an infinite loop. 	  */
-		SRAM_ReadBuffer(&count1, 2000, 1);
-			if(count1 == count)
-			{
 		macLED1_TOGGLE();
-			}
 		count ++;
-		SRAM_WriteBuffer(&count, 2000, 1);
 		OSTimeDly(1000, OS_OPT_TIME_DLY, &err);
 		}
 

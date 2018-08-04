@@ -56,3 +56,4 @@
 .\objects\stm32f10x_it.o: ..\..\User\uCOS-III\Source\os_type.h
 .\objects\stm32f10x_it.o: ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h
 .\objects\stm32f10x_it.o: ..\..\User\BSP\key\keys.h
+.\objects\stm32f10x_it.o: ..\..\User\BSP\ExRam\exram.h

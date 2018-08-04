@@ -55,3 +55,4 @@
 .\objects\keys.o: ..\..\User\uCOS-III\Source\os_type.h
 .\objects\keys.o: ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h
 .\objects\keys.o: ..\..\User\BSP\key\keys.h
+.\objects\keys.o: ..\..\User\BSP\ExRam\exram.h

@@ -5,7 +5,7 @@ F (..\..\Libraries\CMSIS\core_cm3.c)(0x53B6A0AA)(-c --cpu Cortex-M3 -D__MICROLIB
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 F (..\..\Libraries\CMSIS\core_cm3.h)(0x53B6A0AA)()
 F (..\..\Libraries\CMSIS\stm32f10x.h)(0x53B6A0AA)()
-F (..\..\Libraries\CMSIS\system_stm32f10x.c)(0x53B6A0AA)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User -I ..\..\User\APP -I ..\..\User\BSP -I ..\..\User\BSP\led -I ..\..\User\uC-CPU -I ..\..\User\uC-CPU\ARM-Cortex-M3\RealView -I ..\..\User\uC-LIB -I ..\..\User\uCOS-III\Source -I ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView -I ..\..\User\BSP\PowerManage -I ..\..\User\BSP\key -I ..\..\User\BSP\ExRam-I.\RTE\____________LED-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_XL -DSTM32F10X_XL -DUSE_STDPERIPH_DRIVER-o .\objects\system_stm32f10x.o --omf_browse .\objects\system_stm32f10x.crf --depend .\objects\system_stm32f10x.d)
+F (..\..\Libraries\CMSIS\system_stm32f10x.c)(0x5B6572EF)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User -I ..\..\User\APP -I ..\..\User\BSP -I ..\..\User\BSP\led -I ..\..\User\uC-CPU -I ..\..\User\uC-CPU\ARM-Cortex-M3\RealView -I ..\..\User\uC-LIB -I ..\..\User\uCOS-III\Source -I ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView -I ..\..\User\BSP\PowerManage -I ..\..\User\BSP\key -I ..\..\User\BSP\ExRam-I.\RTE\____________LED-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_XL -DSTM32F10X_XL -DUSE_STDPERIPH_DRIVER-o .\objects\system_stm32f10x.o --omf_browse .\objects\system_stm32f10x.crf --depend .\objects\system_stm32f10x.d)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x53B6A0AA)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x53B6A0AA)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -749,16 +749,17 @@ I (..\..\User\uC-CPU\cpu_core.h)(0x5068E2FC)
 I (..\..\User\uC-LIB\lib_mem.h)(0x50CEB6E6)
 I (..\..\User\APP\lib_cfg.h)(0x5B64698D)
 I (..\..\User\uC-LIB\lib_str.h)(0x50CEB6DC)
-I (..\..\User\BSP\bsp.h)(0x5B5DB735)
-I (..\..\User\APP\app_cfg.h)(0x5B6469D4)
+I (..\..\User\BSP\bsp.h)(0x5B6575EF)
+I (..\..\User\APP\app_cfg.h)(0x5B64EE59)
 I (..\..\User\BSP\led\bsp_led.h)(0x5B5D8A48)
 I (..\..\User\BSP\PowerManage\PowerManage.h)(0x5B6463CA)
 I (..\..\User\uCOS-III\Source\os.h)(0x50FFA894)
 I (..\..\User\APP\os_cfg.h)(0x5032F3B0)
 I (..\..\User\uCOS-III\Source\os_type.h)(0x50FFA894)
 I (..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h)(0x4FFE6960)
+I (..\..\User\BSP\ExRam\exram.h)(0x5B6575FE)
 F (..\..\User\stm32f10x_it.h)(0x5B5F26E5)()
-F (..\..\User\APP\app.c)(0x5B64648B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User -I ..\..\User\APP -I ..\..\User\BSP -I ..\..\User\BSP\led -I ..\..\User\uC-CPU -I ..\..\User\uC-CPU\ARM-Cortex-M3\RealView -I ..\..\User\uC-LIB -I ..\..\User\uCOS-III\Source -I ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView -I ..\..\User\BSP\PowerManage -I ..\..\User\BSP\key -I ..\..\User\BSP\ExRam-I.\RTE\____________LED-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_XL -DSTM32F10X_XL -DUSE_STDPERIPH_DRIVER-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
+F (..\..\User\APP\app.c)(0x5B657E95)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User -I ..\..\User\APP -I ..\..\User\BSP -I ..\..\User\BSP\led -I ..\..\User\uC-CPU -I ..\..\User\uC-CPU\ARM-Cortex-M3\RealView -I ..\..\User\uC-LIB -I ..\..\User\uCOS-III\Source -I ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView -I ..\..\User\BSP\PowerManage -I ..\..\User\BSP\key -I ..\..\User\BSP\ExRam-I.\RTE\____________LED-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_XL -DSTM32F10X_XL -DUSE_STDPERIPH_DRIVER-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
 I (..\..\User\APP\includes.h)(0x55A62640)
 I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
@@ -774,7 +775,7 @@ I (..\..\User\uC-CPU\cpu_core.h)(0x5068E2FC)
 I (..\..\User\uC-LIB\lib_mem.h)(0x50CEB6E6)
 I (..\..\User\APP\lib_cfg.h)(0x5B64698D)
 I (..\..\User\uC-LIB\lib_str.h)(0x50CEB6DC)
-I (..\..\User\BSP\bsp.h)(0x5B5DB735)
+I (..\..\User\BSP\bsp.h)(0x5B6575EF)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x53B6A0AA)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x53B6A0AA)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -803,7 +804,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x53B6A0AA)
-I (..\..\User\APP\app_cfg.h)(0x5B6469D4)
+I (..\..\User\APP\app_cfg.h)(0x5B64EE59)
 I (..\..\User\BSP\led\bsp_led.h)(0x5B5D8A48)
 I (..\..\User\BSP\PowerManage\PowerManage.h)(0x5B6463CA)
 I (..\..\User\uCOS-III\Source\os.h)(0x50FFA894)
@@ -811,7 +812,8 @@ I (..\..\User\APP\os_cfg.h)(0x5032F3B0)
 I (..\..\User\uCOS-III\Source\os_type.h)(0x50FFA894)
 I (..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h)(0x4FFE6960)
 I (..\..\User\BSP\key\keys.h)(0x5B64639B)
-F (..\..\User\APP\app_cfg.h)(0x5B6469D4)()
+I (..\..\User\BSP\ExRam\exram.h)(0x5B6575FE)
+F (..\..\User\APP\app_cfg.h)(0x5B64EE59)()
 F (..\..\User\APP\cpu_cfg.h)(0x55A3576A)()
 F (..\..\User\APP\includes.h)(0x55A62640)()
 F (..\..\User\APP\lib_cfg.h)(0x5B64698D)()
@@ -834,7 +836,7 @@ F (..\..\User\APP\os_app_hooks.h)(0x5032F3B0)()
 F (..\..\User\APP\os_cfg.h)(0x5032F3B0)()
 F (..\..\User\APP\os_cfg_app.h)(0x5032F3B0)()
 F (..\..\User\BSP\bsp.c)(0x5B5F0271)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User -I ..\..\User\APP -I ..\..\User\BSP -I ..\..\User\BSP\led -I ..\..\User\uC-CPU -I ..\..\User\uC-CPU\ARM-Cortex-M3\RealView -I ..\..\User\uC-LIB -I ..\..\User\uCOS-III\Source -I ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView -I ..\..\User\BSP\PowerManage -I ..\..\User\BSP\key -I ..\..\User\BSP\ExRam-I.\RTE\____________LED-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_XL -DSTM32F10X_XL -DUSE_STDPERIPH_DRIVER-o .\objects\bsp.o --omf_browse .\objects\bsp.crf --depend .\objects\bsp.d)
-I (..\..\User\BSP\bsp.h)(0x5B5DB735)
+I (..\..\User\BSP\bsp.h)(0x5B6575EF)
 I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (..\..\User\uC-CPU\ARM-Cortex-M3\RealView\cpu.h)(0x5011F816)
@@ -874,7 +876,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x53B6A0AA)
-I (..\..\User\APP\app_cfg.h)(0x5B6469D4)
+I (..\..\User\APP\app_cfg.h)(0x5B64EE59)
 I (..\..\User\BSP\led\bsp_led.h)(0x5B5D8A48)
 I (..\..\User\BSP\PowerManage\PowerManage.h)(0x5B6463CA)
 I (..\..\User\APP\includes.h)(0x55A62640)
@@ -886,7 +888,8 @@ I (..\..\User\APP\os_cfg.h)(0x5032F3B0)
 I (..\..\User\uCOS-III\Source\os_type.h)(0x50FFA894)
 I (..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h)(0x4FFE6960)
 I (..\..\User\BSP\key\keys.h)(0x5B64639B)
-F (..\..\User\BSP\bsp.h)(0x5B5DB735)()
+I (..\..\User\BSP\ExRam\exram.h)(0x5B6575FE)
+F (..\..\User\BSP\bsp.h)(0x5B6575EF)()
 F (..\..\User\BSP\led\bsp_led.c)(0x5B5D87D7)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User -I ..\..\User\APP -I ..\..\User\BSP -I ..\..\User\BSP\led -I ..\..\User\uC-CPU -I ..\..\User\uC-CPU\ARM-Cortex-M3\RealView -I ..\..\User\uC-LIB -I ..\..\User\uCOS-III\Source -I ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView -I ..\..\User\BSP\PowerManage -I ..\..\User\BSP\key -I ..\..\User\BSP\ExRam-I.\RTE\____________LED-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_XL -DSTM32F10X_XL -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_led.o --omf_browse .\objects\bsp_led.crf --depend .\objects\bsp_led.d)
 I (..\..\User\BSP\led\bsp_led.h)(0x5B5D8A48)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x53B6A0AA)
@@ -934,7 +937,7 @@ I (..\..\User\uC-CPU\cpu_core.h)(0x5068E2FC)
 I (..\..\User\uC-LIB\lib_mem.h)(0x50CEB6E6)
 I (..\..\User\APP\lib_cfg.h)(0x5B64698D)
 I (..\..\User\uC-LIB\lib_str.h)(0x50CEB6DC)
-I (..\..\User\BSP\bsp.h)(0x5B5DB735)
+I (..\..\User\BSP\bsp.h)(0x5B6575EF)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x53B6A0AA)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x53B6A0AA)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -963,13 +966,14 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x53B6A0AA)
-I (..\..\User\APP\app_cfg.h)(0x5B6469D4)
+I (..\..\User\APP\app_cfg.h)(0x5B64EE59)
 I (..\..\User\BSP\led\bsp_led.h)(0x5B5D8A48)
 I (..\..\User\BSP\key\keys.h)(0x5B64639B)
 I (..\..\User\uCOS-III\Source\os.h)(0x50FFA894)
 I (..\..\User\APP\os_cfg.h)(0x5032F3B0)
 I (..\..\User\uCOS-III\Source\os_type.h)(0x50FFA894)
 I (..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h)(0x4FFE6960)
+I (..\..\User\BSP\ExRam\exram.h)(0x5B6575FE)
 F (..\..\User\BSP\key\keys.c)(0x5B646469)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User -I ..\..\User\APP -I ..\..\User\BSP -I ..\..\User\BSP\led -I ..\..\User\uC-CPU -I ..\..\User\uC-CPU\ARM-Cortex-M3\RealView -I ..\..\User\uC-LIB -I ..\..\User\uCOS-III\Source -I ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView -I ..\..\User\BSP\PowerManage -I ..\..\User\BSP\key -I ..\..\User\BSP\ExRam-I.\RTE\____________LED-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_XL -DSTM32F10X_XL -DUSE_STDPERIPH_DRIVER-o .\objects\keys.o --omf_browse .\objects\keys.crf --depend .\objects\keys.d)
 I (..\..\User\BSP\key\keys.h)(0x5B64639B)
 I (..\..\User\APP\includes.h)(0x55A62640)
@@ -987,7 +991,7 @@ I (..\..\User\uC-CPU\cpu_core.h)(0x5068E2FC)
 I (..\..\User\uC-LIB\lib_mem.h)(0x50CEB6E6)
 I (..\..\User\APP\lib_cfg.h)(0x5B64698D)
 I (..\..\User\uC-LIB\lib_str.h)(0x50CEB6DC)
-I (..\..\User\BSP\bsp.h)(0x5B5DB735)
+I (..\..\User\BSP\bsp.h)(0x5B6575EF)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x53B6A0AA)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x53B6A0AA)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -1016,15 +1020,16 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x53B6A0AA)
-I (..\..\User\APP\app_cfg.h)(0x5B6469D4)
+I (..\..\User\APP\app_cfg.h)(0x5B64EE59)
 I (..\..\User\BSP\led\bsp_led.h)(0x5B5D8A48)
 I (..\..\User\BSP\PowerManage\PowerManage.h)(0x5B6463CA)
 I (..\..\User\uCOS-III\Source\os.h)(0x50FFA894)
 I (..\..\User\APP\os_cfg.h)(0x5032F3B0)
 I (..\..\User\uCOS-III\Source\os_type.h)(0x50FFA894)
 I (..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h)(0x4FFE6960)
-F (..\..\User\BSP\ExRam\ExRAM.c)(0x5B64EE12)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User -I ..\..\User\APP -I ..\..\User\BSP -I ..\..\User\BSP\led -I ..\..\User\uC-CPU -I ..\..\User\uC-CPU\ARM-Cortex-M3\RealView -I ..\..\User\uC-LIB -I ..\..\User\uCOS-III\Source -I ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView -I ..\..\User\BSP\PowerManage -I ..\..\User\BSP\key -I ..\..\User\BSP\ExRam-I.\RTE\____________LED-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_XL -DSTM32F10X_XL -DUSE_STDPERIPH_DRIVER-o .\objects\exram.o --omf_browse .\objects\exram.crf --depend .\objects\exram.d)
-I (..\..\User\BSP\ExRam\exram.h)(0x5B64EDFF)
+I (..\..\User\BSP\ExRam\exram.h)(0x5B6575FE)
+F (..\..\User\BSP\ExRam\ExRAM.c)(0x5B658C7F)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User -I ..\..\User\APP -I ..\..\User\BSP -I ..\..\User\BSP\led -I ..\..\User\uC-CPU -I ..\..\User\uC-CPU\ARM-Cortex-M3\RealView -I ..\..\User\uC-LIB -I ..\..\User\uCOS-III\Source -I ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView -I ..\..\User\BSP\PowerManage -I ..\..\User\BSP\key -I ..\..\User\BSP\ExRam-I.\RTE\____________LED-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_XL -DSTM32F10X_XL -DUSE_STDPERIPH_DRIVER-o .\objects\exram.o --omf_browse .\objects\exram.crf --depend .\objects\exram.d)
+I (..\..\User\BSP\ExRam\exram.h)(0x5B6575FE)
 I (..\..\User\APP\includes.h)(0x55A62640)
 I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
@@ -1040,7 +1045,7 @@ I (..\..\User\uC-CPU\cpu_core.h)(0x5068E2FC)
 I (..\..\User\uC-LIB\lib_mem.h)(0x50CEB6E6)
 I (..\..\User\APP\lib_cfg.h)(0x5B64698D)
 I (..\..\User\uC-LIB\lib_str.h)(0x50CEB6DC)
-I (..\..\User\BSP\bsp.h)(0x5B5DB735)
+I (..\..\User\BSP\bsp.h)(0x5B6575EF)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x53B6A0AA)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x53B6A0AA)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -1069,7 +1074,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x53B6A0AA)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x53B6A0AA)
-I (..\..\User\APP\app_cfg.h)(0x5B6469D4)
+I (..\..\User\APP\app_cfg.h)(0x5B64EE59)
 I (..\..\User\BSP\led\bsp_led.h)(0x5B5D8A48)
 I (..\..\User\BSP\PowerManage\PowerManage.h)(0x5B6463CA)
 I (..\..\User\uCOS-III\Source\os.h)(0x50FFA894)

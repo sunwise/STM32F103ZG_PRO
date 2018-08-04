@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_XL, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS;..\..\Libraries\FWlib\inc;..\..\User;..\..\User\APP;..\..\User\BSP;..\..\User\BSP\led;..\..\User\uC-CPU;..\..\User\uC-CPU\ARM-Cortex-M3\RealView;..\..\User\uC-LIB;..\..\User\uCOS-III\Source;..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView;..\..\User\BSP\PowerManage;..\..\User\BSP\key</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS;..\..\Libraries\FWlib\inc;..\..\User;..\..\User\APP;..\..\User\BSP;..\..\User\BSP\led;..\..\User\uC-CPU;..\..\User\uC-CPU\ARM-Cortex-M3\RealView;..\..\User\uC-LIB;..\..\User\uCOS-III\Source;..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView;..\..\User\BSP\PowerManage;..\..\User\BSP\key;..\..\User\BSP\ExRam</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -643,6 +643,11 @@
               <FileName>keys.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\BSP\key\keys.c</FilePath>
+            </File>
+            <File>
+              <FileName>ExRAM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\BSP\ExRam\ExRAM.c</FilePath>
             </File>
           </Files>
         </Group>
