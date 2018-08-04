@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ISO-STM32.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ISO-STM32.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sat Aug 04 19:22:49 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Sat Aug 04 20:52:11 2018
 <BR><P>
 <H3>Maximum Stack Usage =        224 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12,16 +12,16 @@ main &rArr; OSInit &rArr; OS_TmrInit &rArr; OSTaskCreate &rArr; OSSched &rArr; O
 <H3>
 Functions with no stack information
 </H3><UL>
- <LI><a href="#[108]">CPU_IntDis</a>
- <LI><a href="#[109]">CPU_IntEn</a>
- <LI><a href="#[7a]">CPU_SR_Save</a>
- <LI><a href="#[7d]">CPU_SR_Restore</a>
- <LI><a href="#[10a]">CPU_WaitForInt</a>
- <LI><a href="#[10b]">CPU_WaitForExcept</a>
- <LI><a href="#[ef]">CPU_CntLeadZeros</a>
- <LI><a href="#[10c]">CPU_CntTrailZeros</a>
- <LI><a href="#[10d]">CPU_RevBits</a>
- <LI><a href="#[c0]">OSStartHighRdy</a>
+ <LI><a href="#[109]">CPU_IntDis</a>
+ <LI><a href="#[10a]">CPU_IntEn</a>
+ <LI><a href="#[79]">CPU_SR_Save</a>
+ <LI><a href="#[7c]">CPU_SR_Restore</a>
+ <LI><a href="#[10b]">CPU_WaitForInt</a>
+ <LI><a href="#[10c]">CPU_WaitForExcept</a>
+ <LI><a href="#[f0]">CPU_CntLeadZeros</a>
+ <LI><a href="#[10d]">CPU_CntTrailZeros</a>
+ <LI><a href="#[10e]">CPU_RevBits</a>
+ <LI><a href="#[c1]">OSStartHighRdy</a>
  <LI><a href="#[8]">OS_CPU_PendSVHandler</a>
 </UL>
 </UL>
@@ -125,7 +125,7 @@ Global Symbols
 <P><STRONG><a name="[48]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(.text)
 </UL>
-<P><STRONG><a name="[102]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[103]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[53]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -135,15 +135,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[103]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[104]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[104]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[105]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[105]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[106]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[106]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[107]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[107]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[108]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f10x_xl.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
@@ -317,99 +317,105 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_xl.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
-<P><STRONG><a name="[108]"></a>CPU_IntDis</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
+<P><STRONG><a name="[109]"></a>CPU_IntDis</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
 
-<P><STRONG><a name="[109]"></a>CPU_IntEn</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
+<P><STRONG><a name="[10a]"></a>CPU_IntEn</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
 
-<P><STRONG><a name="[7a]"></a>CPU_SR_Save</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<P><STRONG><a name="[79]"></a>CPU_SR_Save</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurReset
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTask
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
 </UL>
 
-<P><STRONG><a name="[7d]"></a>CPU_SR_Restore</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<P><STRONG><a name="[7c]"></a>CPU_SR_Restore</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurReset
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTask
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
 </UL>
 
-<P><STRONG><a name="[10a]"></a>CPU_WaitForInt</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
+<P><STRONG><a name="[10b]"></a>CPU_WaitForInt</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
 
-<P><STRONG><a name="[10b]"></a>CPU_WaitForExcept</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
+<P><STRONG><a name="[10c]"></a>CPU_WaitForExcept</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
 
-<P><STRONG><a name="[ef]"></a>CPU_CntLeadZeros</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioGetHighest
+<P><STRONG><a name="[f0]"></a>CPU_CntLeadZeros</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioGetHighest
 </UL>
 
-<P><STRONG><a name="[10c]"></a>CPU_CntTrailZeros</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
+<P><STRONG><a name="[10d]"></a>CPU_CntTrailZeros</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
 
-<P><STRONG><a name="[10d]"></a>CPU_RevBits</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
+<P><STRONG><a name="[10e]"></a>CPU_RevBits</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, cpu_a.o(.text), UNUSED)
 
 <P><STRONG><a name="[54]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
@@ -417,10 +423,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[10e]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[10f]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[c0]"></a>OSStartHighRdy</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(CODE))
-<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
+<P><STRONG><a name="[c1]"></a>OSStartHighRdy</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(CODE))
+<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
 </UL>
 
 <P><STRONG><a name="[8]"></a>OS_CPU_PendSVHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, os_cpu_a.o(CODE))
@@ -466,8 +472,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AllAdcInit
 </UL>
 
-<P><STRONG><a name="[fb]"></a>ADC_SoftwareStartConvCmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f10x_adc.o(i.ADC_SoftwareStartConvCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
+<P><STRONG><a name="[fc]"></a>ADC_SoftwareStartConvCmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f10x_adc.o(i.ADC_SoftwareStartConvCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
 </UL>
 
 <P><STRONG><a name="[63]"></a>ADC_StartCalibration</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_adc.o(i.ADC_StartCalibration))
@@ -477,9 +483,9 @@ Global Symbols
 <P><STRONG><a name="[67]"></a>BSP_CPU_ClkFreq</STRONG> (Thumb, 16 bytes, Stack size 24 bytes, bsp.o(i.BSP_CPU_ClkFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = BSP_CPU_ClkFreq &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrInit
+<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrInit
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
@@ -487,9 +493,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
 <LI>Call Chain = BSP_Init &rArr; Powermanage_Init &rArr; DMA_Configuration &rArr; NVIC_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_Init
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
@@ -501,20 +507,20 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
 <LI>Call Chain = CPU_Init &rArr; CPU_TS_Init &rArr; CPU_TS_TmrInit &rArr; BSP_CPU_ClkFreq &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_Init
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameInit
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_Init
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameInit
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
-<P><STRONG><a name="[7e]"></a>CPU_IntDisMeasMaxCurGet</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cpu_core.o(i.CPU_IntDisMeasMaxCurGet))
+<P><STRONG><a name="[7d]"></a>CPU_IntDisMeasMaxCurGet</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cpu_core.o(i.CPU_IntDisMeasMaxCurGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = CPU_IntDisMeasMaxCurGet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCalc
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCalc
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurReset
 </UL>
@@ -523,194 +529,200 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = CPU_IntDisMeasMaxCurReset &rArr; CPU_IntDisMeasMaxCurGet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 </UL>
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSwHook
 </UL>
 
-<P><STRONG><a name="[80]"></a>CPU_IntDisMeasMaxGet</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cpu_core.o(i.CPU_IntDisMeasMaxGet))
+<P><STRONG><a name="[7f]"></a>CPU_IntDisMeasMaxGet</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cpu_core.o(i.CPU_IntDisMeasMaxGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = CPU_IntDisMeasMaxGet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCalc
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCalc
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 </UL>
 
-<P><STRONG><a name="[7b]"></a>CPU_IntDisMeasStart</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_IntDisMeasStart))
+<P><STRONG><a name="[7a]"></a>CPU_IntDisMeasStart</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_IntDisMeasStart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CPU_IntDisMeasStart
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTask
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
 </UL>
 
-<P><STRONG><a name="[7c]"></a>CPU_IntDisMeasStop</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_IntDisMeasStop))
+<P><STRONG><a name="[7b]"></a>CPU_IntDisMeasStop</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_IntDisMeasStop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CPU_IntDisMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasInit
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTask
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
 </UL>
 
-<P><STRONG><a name="[82]"></a>CPU_NameClr</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_NameClr))
+<P><STRONG><a name="[81]"></a>CPU_NameClr</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_NameClr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44 + Unknown Stack Size
 <LI>Call Chain = CPU_NameClr &rArr; Mem_Clr &rArr; Mem_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Clr
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Clr
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
 </UL>
-<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameInit
-</UL>
-
-<P><STRONG><a name="[85]"></a>CPU_TS_TmrFreqSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu_core.o(i.CPU_TS_TmrFreqSet))
-<BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrInit
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameInit
 </UL>
 
-<P><STRONG><a name="[84]"></a>CPU_TS_TmrInit</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, bsp.o(i.CPU_TS_TmrInit))
+<P><STRONG><a name="[84]"></a>CPU_TS_TmrFreqSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu_core.o(i.CPU_TS_TmrFreqSet))
+<BR><BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrInit
+</UL>
+
+<P><STRONG><a name="[83]"></a>CPU_TS_TmrInit</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, bsp.o(i.CPU_TS_TmrInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = CPU_TS_TmrInit &rArr; BSP_CPU_ClkFreq &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrFreqSet
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrFreqSet
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_Init
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_Init
 </UL>
 
-<P><STRONG><a name="[81]"></a>CPU_TS_TmrRd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bsp.o(i.CPU_TS_TmrRd))
-<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<P><STRONG><a name="[80]"></a>CPU_TS_TmrRd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bsp.o(i.CPU_TS_TmrRd))
+<BR><BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSwHook
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrTask
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
 </UL>
 
 <P><STRONG><a name="[15]"></a>DMA1_Channel1_IRQHandler</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, powermanage.o(i.DMA1_Channel1_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = DMA1_Channel1_IRQHandler &rArr; OSSemPost &rArr; OS_SemPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetITStatus
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ClearITPendingBit
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
+<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetITStatus
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ClearITPendingBit
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
-<P><STRONG><a name="[88]"></a>DMA_ClearITPendingBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_ClearITPendingBit))
-<BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<P><STRONG><a name="[87]"></a>DMA_ClearITPendingBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_ClearITPendingBit))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
 <LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[fc]"></a>DMA_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_Cmd))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
+<P><STRONG><a name="[fd]"></a>DMA_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_Cmd))
+<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
 </UL>
 
-<P><STRONG><a name="[8b]"></a>DMA_Configuration</STRONG> (Thumb, 110 bytes, Stack size 56 bytes, powermanage.o(i.DMA_Configuration))
+<P><STRONG><a name="[8a]"></a>DMA_Configuration</STRONG> (Thumb, 110 bytes, Stack size 56 bytes, powermanage.o(i.DMA_Configuration))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = DMA_Configuration &rArr; NVIC_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Init
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ITConfig
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_DeInit
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ClearITPendingBit
+<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Init
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ITConfig
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_DeInit
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ClearITPendingBit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
-</UL>
-
-<P><STRONG><a name="[8c]"></a>DMA_DeInit</STRONG> (Thumb, 324 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_DeInit))
-<BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
 </UL>
 
-<P><STRONG><a name="[87]"></a>DMA_GetITStatus</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_GetITStatus))
+<P><STRONG><a name="[8b]"></a>DMA_DeInit</STRONG> (Thumb, 324 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_DeInit))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+</UL>
+
+<P><STRONG><a name="[86]"></a>DMA_GetITStatus</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_GetITStatus))
 <BR><BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[8e]"></a>DMA_ITConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_ITConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<P><STRONG><a name="[8d]"></a>DMA_ITConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_dma.o(i.DMA_ITConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
 </UL>
 
-<P><STRONG><a name="[8d]"></a>DMA_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f10x_dma.o(i.DMA_Init))
+<P><STRONG><a name="[8c]"></a>DMA_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f10x_dma.o(i.DMA_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DMA_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
 </UL>
 
 <P><STRONG><a name="[7]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.DebugMon_Handler))
@@ -720,7 +732,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = EXTI0_IRQHandler &rArr; KEY3_IRQ_DEAL &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
@@ -728,7 +740,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = EXTI1_IRQHandler &rArr; KEY4_IRQ_DEAL &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
@@ -736,7 +748,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = EXTI3_IRQHandler &rArr; KEY5_IRQ_DEAL &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
@@ -744,128 +756,128 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = EXTI9_5_IRQHandler &rArr; KEY2_IRQ_DEAL &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
-<P><STRONG><a name="[95]"></a>EXTI_ClearITPendingBit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_exti.o(i.EXTI_ClearITPendingBit))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
+<P><STRONG><a name="[94]"></a>EXTI_ClearITPendingBit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_exti.o(i.EXTI_ClearITPendingBit))
+<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
 </UL>
 
-<P><STRONG><a name="[94]"></a>EXTI_GetITStatus</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32f10x_exti.o(i.EXTI_GetITStatus))
-<BR><BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
+<P><STRONG><a name="[93]"></a>EXTI_GetITStatus</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32f10x_exti.o(i.EXTI_GetITStatus))
+<BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
 </UL>
 
-<P><STRONG><a name="[9c]"></a>EXTI_Init</STRONG> (Thumb, 142 bytes, Stack size 0 bytes, stm32f10x_exti.o(i.EXTI_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
+<P><STRONG><a name="[9b]"></a>EXTI_Init</STRONG> (Thumb, 142 bytes, Stack size 0 bytes, stm32f10x_exti.o(i.EXTI_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
 </UL>
 
-<P><STRONG><a name="[ff]"></a>FSMC_NORSRAMCmd</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, stm32f10x_fsmc.o(i.FSMC_NORSRAMCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
+<P><STRONG><a name="[100]"></a>FSMC_NORSRAMCmd</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, stm32f10x_fsmc.o(i.FSMC_NORSRAMCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
 </UL>
 
-<P><STRONG><a name="[fe]"></a>FSMC_NORSRAMInit</STRONG> (Thumb, 230 bytes, Stack size 0 bytes, stm32f10x_fsmc.o(i.FSMC_NORSRAMInit))
-<BR><BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
+<P><STRONG><a name="[ff]"></a>FSMC_NORSRAMInit</STRONG> (Thumb, 230 bytes, Stack size 0 bytes, stm32f10x_fsmc.o(i.FSMC_NORSRAMInit))
+<BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
 </UL>
 
-<P><STRONG><a name="[9b]"></a>GPIO_EXTILineConfig</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, stm32f10x_gpio.o(i.GPIO_EXTILineConfig))
+<P><STRONG><a name="[9a]"></a>GPIO_EXTILineConfig</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, stm32f10x_gpio.o(i.GPIO_EXTILineConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIO_EXTILineConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
 </UL>
 
 <P><STRONG><a name="[5c]"></a>GPIO_Init</STRONG> (Thumb, 278 bytes, Stack size 24 bytes, stm32f10x_gpio.o(i.GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_GPIO_Config
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_GPIO_Config
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AllAdcInit
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
 </UL>
 
-<P><STRONG><a name="[6e]"></a>GPIO_ReadOutputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit))
+<P><STRONG><a name="[6d]"></a>GPIO_ReadOutputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit))
 <BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
-<P><STRONG><a name="[6f]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ResetBits))
+<P><STRONG><a name="[6e]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ResetBits))
 <BR><BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerManTask
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
-<P><STRONG><a name="[70]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_SetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
+<P><STRONG><a name="[6f]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_SetBits))
+<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.HardFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
-<P><STRONG><a name="[93]"></a>KEY2_IRQ_DEAL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, keys.o(i.KEY2_IRQ_DEAL))
+<P><STRONG><a name="[92]"></a>KEY2_IRQ_DEAL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, keys.o(i.KEY2_IRQ_DEAL))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = KEY2_IRQ_DEAL &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
 </UL>
 <BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI9_5_IRQHandler
 </UL>
 
-<P><STRONG><a name="[90]"></a>KEY3_IRQ_DEAL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, keys.o(i.KEY3_IRQ_DEAL))
+<P><STRONG><a name="[8f]"></a>KEY3_IRQ_DEAL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, keys.o(i.KEY3_IRQ_DEAL))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = KEY3_IRQ_DEAL &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[91]"></a>KEY4_IRQ_DEAL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, keys.o(i.KEY4_IRQ_DEAL))
+<P><STRONG><a name="[90]"></a>KEY4_IRQ_DEAL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, keys.o(i.KEY4_IRQ_DEAL))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = KEY4_IRQ_DEAL &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[92]"></a>KEY5_IRQ_DEAL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, keys.o(i.KEY5_IRQ_DEAL))
+<P><STRONG><a name="[91]"></a>KEY5_IRQ_DEAL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, keys.o(i.KEY5_IRQ_DEAL))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = KEY5_IRQ_DEAL &rArr; OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntEnter
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI3_IRQHandler
 </UL>
 
-<P><STRONG><a name="[97]"></a>KeyDeal</STRONG> (Thumb, 386 bytes, Stack size 16 bytes, keys.o(i.KeyDeal))
+<P><STRONG><a name="[96]"></a>KeyDeal</STRONG> (Thumb, 386 bytes, Stack size 16 bytes, keys.o(i.KeyDeal))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = KeyDeal &rArr; OSTimeGet &rArr; CPU_IntDisMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeGet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDealTask
 </UL>
@@ -874,24 +886,24 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 140 + Unknown Stack Size
 <LI>Call Chain = KeyDealTask &rArr; OSTaskQPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDeal
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDeal
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.AppTaskStart)
 </UL>
-<P><STRONG><a name="[76]"></a>Keys_Init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, keys.o(i.Keys_Init))
+<P><STRONG><a name="[75]"></a>Keys_Init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, keys.o(i.Keys_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = Keys_Init &rArr; Keys_GPIO_Config &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
 </UL>
 
-<P><STRONG><a name="[74]"></a>LED_Init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, bsp_led.o(i.LED_Init))
+<P><STRONG><a name="[73]"></a>LED_Init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, bsp_led.o(i.LED_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LED_Init &rArr; LED_GPIO_Config &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
+<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
 </UL>
@@ -899,217 +911,244 @@ Global Symbols
 <P><STRONG><a name="[3]"></a>MemManage_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.MemManage_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
-<P><STRONG><a name="[83]"></a>Mem_Clr</STRONG> (Thumb, 18 bytes, Stack size 12 bytes, lib_mem.o(i.Mem_Clr))
+<P><STRONG><a name="[82]"></a>Mem_Clr</STRONG> (Thumb, 18 bytes, Stack size 12 bytes, lib_mem.o(i.Mem_Clr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Mem_Clr &rArr; Mem_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Set
+<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
 </UL>
 
 <P><STRONG><a name="[69]"></a>Mem_Init</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, lib_mem.o(i.Mem_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
-<P><STRONG><a name="[9f]"></a>Mem_Set</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, lib_mem.o(i.Mem_Set))
+<P><STRONG><a name="[9e]"></a>Mem_Set</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, lib_mem.o(i.Mem_Set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Mem_Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Clr
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Clr
 </UL>
 
 <P><STRONG><a name="[1]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.NMI_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
-<P><STRONG><a name="[8f]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
+<P><STRONG><a name="[8e]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
 </UL>
 
-<P><STRONG><a name="[9d]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(i.NVIC_PriorityGroupConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
+<P><STRONG><a name="[9c]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(i.NVIC_PriorityGroupConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
 </UL>
 
-<P><STRONG><a name="[b1]"></a>OSCfg_Init</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, os_cfg_app.o(i.OSCfg_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<P><STRONG><a name="[b0]"></a>OSCfg_Init</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, os_cfg_app.o(i.OSCfg_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[e1]"></a>OSIdleTaskHook</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSIdleTaskHook))
+<P><STRONG><a name="[e2]"></a>OSIdleTaskHook</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSIdleTaskHook))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSIdleTaskHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTask
 </UL>
 
-<P><STRONG><a name="[a0]"></a>OSInit</STRONG> (Thumb, 300 bytes, Stack size 16 bytes, os_core.o(i.OSInit))
+<P><STRONG><a name="[9f]"></a>OSInit</STRONG> (Thumb, 300 bytes, Stack size 16 bytes, os_core.o(i.OSInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = OSInit &rArr; OS_TmrInit &rArr; OSTaskCreate &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrInit
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTaskInit
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInit
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTaskInit
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemInit
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QInit
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInit
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexInit
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgPoolInit
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MemInit
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTaskInit
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagInit
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Dbg_Init
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInitHook
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInit
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTaskInit
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSCfg_Init
+<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrInit
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTaskInit
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInit
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTaskInit
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemInit
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QInit
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInit
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MutexInit
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgPoolInit
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MemInit
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTaskInit
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagInit
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Dbg_Init
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInitHook
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInit
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTaskInit
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSCfg_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a1]"></a>OSInitHook</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, os_cpu_c.o(i.OSInitHook))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<P><STRONG><a name="[a0]"></a>OSInitHook</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, os_cpu_c.o(i.OSInitHook))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[86]"></a>OSIntEnter</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, os_core.o(i.OSIntEnter))
+<P><STRONG><a name="[85]"></a>OSIntEnter</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, os_core.o(i.OSIntEnter))
 <BR><BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel1_IRQHandler
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
 </UL>
 
-<P><STRONG><a name="[8a]"></a>OSIntExit</STRONG> (Thumb, 192 bytes, Stack size 8 bytes, os_core.o(i.OSIntExit))
+<P><STRONG><a name="[89]"></a>OSIntExit</STRONG> (Thumb, 192 bytes, Stack size 8 bytes, os_core.o(i.OSIntExit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = OSIntExit &rArr; OS_PrioGetHighest
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioGetHighest
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioGetHighest
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel1_IRQHandler
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
 </UL>
 
-<P><STRONG><a name="[b3]"></a>OSSched</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, os_core.o(i.OSSched))
+<P><STRONG><a name="[b2]"></a>OSMemCreate</STRONG> (Thumb, 326 bytes, Stack size 64 bytes, os_mem.o(i.OSMemCreate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
+<LI>Call Chain = OSMemCreate &rArr; OS_SchedLockTimeMeasStop
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MemDbgListAdd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[70]"></a>OSMemGet</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, os_mem.o(i.OSMemGet))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
+<LI>Call Chain = OSMemGet &rArr; CPU_IntDisMeasStop
+</UL>
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+</UL>
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
+</UL>
+
+<P><STRONG><a name="[b6]"></a>OSSched</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, os_core.o(i.OSSched))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = OSSched &rArr; OS_PrioGetHighest
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioGetHighest
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioGetHighest
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 
-<P><STRONG><a name="[b4]"></a>OSSchedLock</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, os_core.o(i.OSSchedLock))
+<P><STRONG><a name="[b7]"></a>OSSchedLock</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, os_core.o(i.OSSchedLock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
-<LI>Call Chain = OSSchedLock &rArr; CPU_IntDisMeasStop
+<LI>Call Chain = OSSchedLock &rArr; OS_SchedLockTimeMeasStart
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrTask
 </UL>
 
-<P><STRONG><a name="[b6]"></a>OSSchedUnlock</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, os_core.o(i.OSSchedUnlock))
+<P><STRONG><a name="[b8]"></a>OSSchedUnlock</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, os_core.o(i.OSSchedUnlock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = OSSchedUnlock &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrTask
 </UL>
 
-<P><STRONG><a name="[b8]"></a>OSSemCreate</STRONG> (Thumb, 210 bytes, Stack size 24 bytes, os_sem.o(i.OSSemCreate))
+<P><STRONG><a name="[b9]"></a>OSSemCreate</STRONG> (Thumb, 210 bytes, Stack size 24 bytes, os_sem.o(i.OSSemCreate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
-<LI>Call Chain = OSSemCreate &rArr; CPU_IntDisMeasStop
+<LI>Call Chain = OSSemCreate &rArr; OS_SchedLockTimeMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListInit
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemDbgListAdd
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListInit
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemDbgListAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
 </UL>
 
-<P><STRONG><a name="[bb]"></a>OSSemPend</STRONG> (Thumb, 524 bytes, Stack size 64 bytes, os_sem.o(i.OSSemPend))
+<P><STRONG><a name="[bc]"></a>OSSemPend</STRONG> (Thumb, 524 bytes, Stack size 64 bytes, os_sem.o(i.OSSemPend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140 + Unknown Stack Size
 <LI>Call Chain = OSSemPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerManTask
 </UL>
 
-<P><STRONG><a name="[89]"></a>OSSemPost</STRONG> (Thumb, 144 bytes, Stack size 40 bytes, os_sem.o(i.OSSemPost))
+<P><STRONG><a name="[88]"></a>OSSemPost</STRONG> (Thumb, 144 bytes, Stack size 40 bytes, os_sem.o(i.OSSemPost))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
 <LI>Call Chain = OSSemPost &rArr; OS_SemPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA1_Channel1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[bf]"></a>OSStart</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, os_core.o(i.OSStart))
+<P><STRONG><a name="[c0]"></a>OSStart</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, os_core.o(i.OSStart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = OSStart &rArr; OS_PrioGetHighest
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioGetHighest
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStartHighRdy
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioGetHighest
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStartHighRdy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c1]"></a>OSStatReset</STRONG> (Thumb, 316 bytes, Stack size 24 bytes, os_stat.o(i.OSStatReset))
+<P><STRONG><a name="[c2]"></a>OSStatReset</STRONG> (Thumb, 316 bytes, Stack size 24 bytes, os_stat.o(i.OSStatReset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = OSStatReset &rArr; CPU_IntDisMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrResetPeak
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListResetPeak
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrResetPeak
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListResetPeak
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 </UL>
@@ -1118,18 +1157,18 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 108 + Unknown Stack Size
 <LI>Call Chain = OSStatTaskCPUUsageInit &rArr; OSTaskSuspend &rArr; OS_TaskSuspend &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 </UL>
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
-<P><STRONG><a name="[f4]"></a>OSStatTaskHook</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSStatTaskHook))
+<P><STRONG><a name="[f5]"></a>OSStatTaskHook</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSStatTaskHook))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSStatTaskHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
@@ -1139,160 +1178,160 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
 <LI>Call Chain = OSTaskCreate &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQInit
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInsert
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsertTail
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkInit
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateHook
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskDbgListAdd
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQInit
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInsert
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsertTail
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkInit
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreateHook
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskDbgListAdd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrInit
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTaskInit
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTaskInit
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTaskInit
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTaskInit
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrInit
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTaskInit
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTaskInit
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTaskInit
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IdleTaskInit
 </UL>
 
-<P><STRONG><a name="[c9]"></a>OSTaskCreateHook</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSTaskCreateHook))
+<P><STRONG><a name="[ca]"></a>OSTaskCreateHook</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSTaskCreateHook))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSTaskCreateHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 </UL>
 
-<P><STRONG><a name="[ce]"></a>OSTaskDel</STRONG> (Thumb, 490 bytes, Stack size 16 bytes, os_task.o(i.OSTaskDel))
+<P><STRONG><a name="[cf]"></a>OSTaskDel</STRONG> (Thumb, 490 bytes, Stack size 16 bytes, os_task.o(i.OSTaskDel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52 + Unknown Stack Size
 <LI>Call Chain = OSTaskDel &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQFreeAll
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListRemove
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDelHook
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskDbgListRemove
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQFreeAll
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListRemove
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDelHook
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskDbgListRemove
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskReturn
 </UL>
 
-<P><STRONG><a name="[d3]"></a>OSTaskDelHook</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSTaskDelHook))
+<P><STRONG><a name="[d4]"></a>OSTaskDelHook</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSTaskDelHook))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSTaskDelHook
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 
-<P><STRONG><a name="[99]"></a>OSTaskQPend</STRONG> (Thumb, 572 bytes, Stack size 40 bytes, os_task.o(i.OSTaskQPend))
+<P><STRONG><a name="[98]"></a>OSTaskQPend</STRONG> (Thumb, 572 bytes, Stack size 40 bytes, os_task.o(i.OSTaskQPend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
 <LI>Call Chain = OSTaskQPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQGet
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQGet
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDealTask
 </UL>
 
-<P><STRONG><a name="[96]"></a>OSTaskQPost</STRONG> (Thumb, 114 bytes, Stack size 48 bytes, os_task.o(i.OSTaskQPost))
+<P><STRONG><a name="[95]"></a>OSTaskQPost</STRONG> (Thumb, 114 bytes, Stack size 48 bytes, os_task.o(i.OSTaskQPost))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = OSTaskQPost &rArr; OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
 </UL>
-<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
+<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY5_IRQ_DEAL
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY4_IRQ_DEAL
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY3_IRQ_DEAL
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY2_IRQ_DEAL
 </UL>
 
-<P><STRONG><a name="[c5]"></a>OSTaskResume</STRONG> (Thumb, 124 bytes, Stack size 32 bytes, os_task.o(i.OSTaskResume))
+<P><STRONG><a name="[c6]"></a>OSTaskResume</STRONG> (Thumb, 124 bytes, Stack size 32 bytes, os_task.o(i.OSTaskResume))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84 + Unknown Stack Size
 <LI>Call Chain = OSTaskResume &rArr; OS_IntQPost &rArr; OS_PrioInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
 </UL>
 
-<P><STRONG><a name="[f5]"></a>OSTaskReturnHook</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSTaskReturnHook))
+<P><STRONG><a name="[f6]"></a>OSTaskReturnHook</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSTaskReturnHook))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSTaskReturnHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskReturn
 </UL>
 
-<P><STRONG><a name="[d8]"></a>OSTaskSemPend</STRONG> (Thumb, 578 bytes, Stack size 32 bytes, os_task.o(i.OSTaskSemPend))
+<P><STRONG><a name="[d9]"></a>OSTaskSemPend</STRONG> (Thumb, 578 bytes, Stack size 32 bytes, os_task.o(i.OSTaskSemPend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108 + Unknown Stack Size
 <LI>Call Chain = OSTaskSemPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrTask
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTask
 </UL>
 
-<P><STRONG><a name="[d9]"></a>OSTaskStkChk</STRONG> (Thumb, 220 bytes, Stack size 32 bytes, os_task.o(i.OSTaskStkChk))
+<P><STRONG><a name="[da]"></a>OSTaskStkChk</STRONG> (Thumb, 220 bytes, Stack size 32 bytes, os_task.o(i.OSTaskStkChk))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = OSTaskStkChk &rArr; CPU_IntDisMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 </UL>
 
-<P><STRONG><a name="[c7]"></a>OSTaskStkInit</STRONG> (Thumb, 188 bytes, Stack size 20 bytes, os_cpu_c.o(i.OSTaskStkInit))
+<P><STRONG><a name="[c8]"></a>OSTaskStkInit</STRONG> (Thumb, 188 bytes, Stack size 20 bytes, os_cpu_c.o(i.OSTaskStkInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = OSTaskStkInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 </UL>
 
-<P><STRONG><a name="[c4]"></a>OSTaskSuspend</STRONG> (Thumb, 78 bytes, Stack size 32 bytes, os_task.o(i.OSTaskSuspend))
+<P><STRONG><a name="[c5]"></a>OSTaskSuspend</STRONG> (Thumb, 78 bytes, Stack size 32 bytes, os_task.o(i.OSTaskSuspend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84 + Unknown Stack Size
 <LI>Call Chain = OSTaskSuspend &rArr; OS_TaskSuspend &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
-<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
 </UL>
@@ -1301,69 +1340,69 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = OSTaskSwHook &rArr; CPU_IntDisMeasMaxCurReset &rArr; CPU_IntDisMeasMaxCurGet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurReset
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> os_cpu_a.o(CODE)
 </UL>
-<P><STRONG><a name="[72]"></a>OSTimeDly</STRONG> (Thumb, 322 bytes, Stack size 24 bytes, os_time.o(i.OSTimeDly))
+<P><STRONG><a name="[71]"></a>OSTimeDly</STRONG> (Thumb, 322 bytes, Stack size 24 bytes, os_time.o(i.OSTimeDly))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
 <LI>Call Chain = OSTimeDly &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListInsert
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListInsert
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 </UL>
 
-<P><STRONG><a name="[98]"></a>OSTimeGet</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, os_time.o(i.OSTimeGet))
+<P><STRONG><a name="[97]"></a>OSTimeGet</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, os_time.o(i.OSTimeGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = OSTimeGet &rArr; CPU_IntDisMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDeal
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDeal
 </UL>
 
-<P><STRONG><a name="[dc]"></a>OSTimeTick</STRONG> (Thumb, 54 bytes, Stack size 32 bytes, os_time.o(i.OSTimeTick))
+<P><STRONG><a name="[dd]"></a>OSTimeTick</STRONG> (Thumb, 54 bytes, Stack size 32 bytes, os_time.o(i.OSTimeTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84 + Unknown Stack Size
 <LI>Call Chain = OSTimeTick &rArr; OS_IntQPost &rArr; OS_PrioInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTickHook
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTickHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickHandler
 </UL>
 
-<P><STRONG><a name="[dd]"></a>OSTimeTickHook</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSTimeTickHook))
+<P><STRONG><a name="[de]"></a>OSTimeTickHook</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, os_cpu_c.o(i.OSTimeTickHook))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OSTimeTickHook
 </UL>
-<BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
+<BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
 </UL>
 
 <P><STRONG><a name="[9]"></a>OS_CPU_SysTickHandler</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, os_cpu_c.o(i.OS_CPU_SysTickHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92 + Unknown Stack Size
 <LI>Call Chain = OS_CPU_SysTickHandler &rArr; OSTimeTick &rArr; OS_IntQPost &rArr; OS_PrioInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
+<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
@@ -1371,91 +1410,91 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
-<P><STRONG><a name="[b0]"></a>OS_Dbg_Init</STRONG> (Thumb, 150 bytes, Stack size 0 bytes, os_dbg.o(i.OS_Dbg_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<P><STRONG><a name="[af]"></a>OS_Dbg_Init</STRONG> (Thumb, 150 bytes, Stack size 0 bytes, os_dbg.o(i.OS_Dbg_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[a4]"></a>OS_FlagInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_flag.o(i.OS_FlagInit))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<P><STRONG><a name="[a3]"></a>OS_FlagInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_flag.o(i.OS_FlagInit))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[de]"></a>OS_FlagPost</STRONG> (Thumb, 626 bytes, Stack size 56 bytes, os_flag.o(i.OS_FlagPost))
+<P><STRONG><a name="[df]"></a>OS_FlagPost</STRONG> (Thumb, 626 bytes, Stack size 56 bytes, os_flag.o(i.OS_FlagPost))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
 <LI>Call Chain = OS_FlagPost &rArr; OS_FlagTaskRdy &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagTaskRdy
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagTaskRdy
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
 </UL>
 
-<P><STRONG><a name="[df]"></a>OS_FlagTaskRdy</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, os_flag.o(i.OS_FlagTaskRdy))
+<P><STRONG><a name="[e0]"></a>OS_FlagTaskRdy</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, os_flag.o(i.OS_FlagTaskRdy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = OS_FlagTaskRdy &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
+<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
 </UL>
 
 <P><STRONG><a name="[4d]"></a>OS_IdleTask</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, os_core.o(i.OS_IdleTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = OS_IdleTask &rArr; CPU_IntDisMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIdleTaskHook
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIdleTaskHook
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> os_core.o(i.OS_IdleTaskInit)
 </UL>
-<P><STRONG><a name="[ac]"></a>OS_IdleTaskInit</STRONG> (Thumb, 66 bytes, Stack size 48 bytes, os_core.o(i.OS_IdleTaskInit))
+<P><STRONG><a name="[ab]"></a>OS_IdleTaskInit</STRONG> (Thumb, 66 bytes, Stack size 48 bytes, os_core.o(i.OS_IdleTaskInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = OS_IdleTaskInit &rArr; OSTaskCreate &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[bd]"></a>OS_IntQPost</STRONG> (Thumb, 224 bytes, Stack size 40 bytes, os_int.o(i.OS_IntQPost))
+<P><STRONG><a name="[be]"></a>OS_IntQPost</STRONG> (Thumb, 224 bytes, Stack size 40 bytes, os_int.o(i.OS_IntQPost))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52 + Unknown Stack Size
 <LI>Call Chain = OS_IntQPost &rArr; OS_PrioInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInsert
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeTick
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 </UL>
 
-<P><STRONG><a name="[e2]"></a>OS_IntQRePost</STRONG> (Thumb, 360 bytes, Stack size 24 bytes, os_int.o(i.OS_IntQRePost))
+<P><STRONG><a name="[e3]"></a>OS_IntQRePost</STRONG> (Thumb, 360 bytes, Stack size 24 bytes, os_int.o(i.OS_IntQRePost))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
 <LI>Call Chain = OS_IntQRePost &rArr; OS_SemPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
 </UL>
@@ -1464,532 +1503,541 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
 <LI>Call Chain = OS_IntQTask &rArr; OS_IntQRePost &rArr; OS_SemPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioRemove
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioRemove
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> os_int.o(i.OS_IntQTaskInit)
 </UL>
-<P><STRONG><a name="[ab]"></a>OS_IntQTaskInit</STRONG> (Thumb, 206 bytes, Stack size 56 bytes, os_int.o(i.OS_IntQTaskInit))
+<P><STRONG><a name="[aa]"></a>OS_IntQTaskInit</STRONG> (Thumb, 206 bytes, Stack size 56 bytes, os_int.o(i.OS_IntQTaskInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
 <LI>Call Chain = OS_IntQTaskInit &rArr; OSTaskCreate &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[a5]"></a>OS_MemInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_mem.o(i.OS_MemInit))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<P><STRONG><a name="[b4]"></a>OS_MemDbgListAdd</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, os_mem.o(i.OS_MemDbgListAdd))
+<BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
 </UL>
 
-<P><STRONG><a name="[a6]"></a>OS_MsgPoolInit</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, os_msg.o(i.OS_MsgPoolInit))
+<P><STRONG><a name="[a4]"></a>OS_MemInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_mem.o(i.OS_MemInit))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[a5]"></a>OS_MsgPoolInit</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, os_msg.o(i.OS_MsgPoolInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OS_MsgPoolInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[d2]"></a>OS_MsgQFreeAll</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, os_msg.o(i.OS_MsgQFreeAll))
+<P><STRONG><a name="[d3]"></a>OS_MsgQFreeAll</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, os_msg.o(i.OS_MsgQFreeAll))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_MsgQFreeAll
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 
-<P><STRONG><a name="[d5]"></a>OS_MsgQGet</STRONG> (Thumb, 98 bytes, Stack size 20 bytes, os_msg.o(i.OS_MsgQGet))
+<P><STRONG><a name="[d6]"></a>OS_MsgQGet</STRONG> (Thumb, 98 bytes, Stack size 20 bytes, os_msg.o(i.OS_MsgQGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = OS_MsgQGet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
 </UL>
 
-<P><STRONG><a name="[c8]"></a>OS_MsgQInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_msg.o(i.OS_MsgQInit))
+<P><STRONG><a name="[c9]"></a>OS_MsgQInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_msg.o(i.OS_MsgQInit))
 <BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskInitTCB
 </UL>
 
-<P><STRONG><a name="[f0]"></a>OS_MsgQPut</STRONG> (Thumb, 254 bytes, Stack size 24 bytes, os_msg.o(i.OS_MsgQPut))
+<P><STRONG><a name="[f1]"></a>OS_MsgQPut</STRONG> (Thumb, 254 bytes, Stack size 24 bytes, os_msg.o(i.OS_MsgQPut))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OS_MsgQPut
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
 </UL>
 
-<P><STRONG><a name="[a7]"></a>OS_MutexInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_mutex.o(i.OS_MutexInit))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<P><STRONG><a name="[a6]"></a>OS_MutexInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_mutex.o(i.OS_MutexInit))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[bc]"></a>OS_Pend</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, os_core.o(i.OS_Pend))
+<P><STRONG><a name="[bd]"></a>OS_Pend</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, os_core.o(i.OS_Pend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = OS_Pend &rArr; OS_TaskBlock &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskBlock
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListInsertPrio
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendDbgNameAdd
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendDataInit
+<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskBlock
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListInsertPrio
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendDbgNameAdd
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendDataInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 </UL>
 
-<P><STRONG><a name="[e8]"></a>OS_PendDataInit</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, os_core.o(i.OS_PendDataInit))
+<P><STRONG><a name="[e9]"></a>OS_PendDataInit</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, os_core.o(i.OS_PendDataInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_PendDataInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
 </UL>
 
-<P><STRONG><a name="[ea]"></a>OS_PendDbgNameAdd</STRONG> (Thumb, 66 bytes, Stack size 12 bytes, os_core.o(i.OS_PendDbgNameAdd))
+<P><STRONG><a name="[eb]"></a>OS_PendDbgNameAdd</STRONG> (Thumb, 66 bytes, Stack size 12 bytes, os_core.o(i.OS_PendDbgNameAdd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = OS_PendDbgNameAdd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
 </UL>
 
-<P><STRONG><a name="[ee]"></a>OS_PendDbgNameRemove</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, os_core.o(i.OS_PendDbgNameRemove))
+<P><STRONG><a name="[ef]"></a>OS_PendDbgNameRemove</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, os_core.o(i.OS_PendDbgNameRemove))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = OS_PendDbgNameRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
 </UL>
 
-<P><STRONG><a name="[b9]"></a>OS_PendListInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, os_core.o(i.OS_PendListInit))
-<BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<P><STRONG><a name="[ba]"></a>OS_PendListInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, os_core.o(i.OS_PendListInit))
+<BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
 </UL>
 
-<P><STRONG><a name="[e9]"></a>OS_PendListInsertPrio</STRONG> (Thumb, 102 bytes, Stack size 20 bytes, os_core.o(i.OS_PendListInsertPrio))
+<P><STRONG><a name="[ea]"></a>OS_PendListInsertPrio</STRONG> (Thumb, 102 bytes, Stack size 20 bytes, os_core.o(i.OS_PendListInsertPrio))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = OS_PendListInsertPrio
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
 </UL>
 
-<P><STRONG><a name="[d1]"></a>OS_PendListRemove</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, os_core.o(i.OS_PendListRemove))
+<P><STRONG><a name="[d2]"></a>OS_PendListRemove</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, os_core.o(i.OS_PendListRemove))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove1
+<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagTaskRdy
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagTaskRdy
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 
-<P><STRONG><a name="[eb]"></a>OS_PendListRemove1</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, os_core.o(i.OS_PendListRemove1))
+<P><STRONG><a name="[ec]"></a>OS_PendListRemove1</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, os_core.o(i.OS_PendListRemove1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_PendListRemove1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
 </UL>
 
-<P><STRONG><a name="[ec]"></a>OS_Post</STRONG> (Thumb, 192 bytes, Stack size 32 bytes, os_core.o(i.OS_Post))
+<P><STRONG><a name="[ed]"></a>OS_Post</STRONG> (Thumb, 192 bytes, Stack size 32 bytes, os_core.o(i.OS_Post))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListRemove
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post1
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendDbgNameRemove
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListRemove
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post1
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendDbgNameRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
 </UL>
 
-<P><STRONG><a name="[ed]"></a>OS_Post1</STRONG> (Thumb, 42 bytes, Stack size 20 bytes, os_core.o(i.OS_Post1))
+<P><STRONG><a name="[ee]"></a>OS_Post1</STRONG> (Thumb, 42 bytes, Stack size 20 bytes, os_core.o(i.OS_Post1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = OS_Post1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
 </UL>
 
-<P><STRONG><a name="[b2]"></a>OS_PrioGetHighest</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, os_prio.o(i.OS_PrioGetHighest))
+<P><STRONG><a name="[b1]"></a>OS_PrioGetHighest</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, os_prio.o(i.OS_PrioGetHighest))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = OS_PrioGetHighest
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_CntLeadZeros
+<BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_CntLeadZeros
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
-</UL>
-
-<P><STRONG><a name="[a2]"></a>OS_PrioInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, os_prio.o(i.OS_PrioInit))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSIntExit
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
 
-<P><STRONG><a name="[ca]"></a>OS_PrioInsert</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, os_prio.o(i.OS_PrioInsert))
+<P><STRONG><a name="[a1]"></a>OS_PrioInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, os_prio.o(i.OS_PrioInit))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[cb]"></a>OS_PrioInsert</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, os_prio.o(i.OS_PrioInsert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = OS_PrioInsert
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQPost
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
 </UL>
 
-<P><STRONG><a name="[e6]"></a>OS_PrioRemove</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, os_prio.o(i.OS_PrioRemove))
+<P><STRONG><a name="[e7]"></a>OS_PrioRemove</STRONG> (Thumb, 32 bytes, Stack size 12 bytes, os_prio.o(i.OS_PrioRemove))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = OS_PrioRemove
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQTask
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
 </UL>
 
-<P><STRONG><a name="[a8]"></a>OS_QInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_q.o(i.OS_QInit))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<P><STRONG><a name="[a7]"></a>OS_QInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_q.o(i.OS_QInit))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[e3]"></a>OS_QPost</STRONG> (Thumb, 382 bytes, Stack size 56 bytes, os_q.o(i.OS_QPost))
+<P><STRONG><a name="[e4]"></a>OS_QPost</STRONG> (Thumb, 382 bytes, Stack size 56 bytes, os_q.o(i.OS_QPost))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = OS_QPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQPut
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQPut
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
-</UL>
-
-<P><STRONG><a name="[a3]"></a>OS_RdyListInit</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, os_core.o(i.OS_RdyListInit))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
 </UL>
 
-<P><STRONG><a name="[f1]"></a>OS_RdyListInsert</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListInsert))
+<P><STRONG><a name="[a2]"></a>OS_RdyListInit</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, os_core.o(i.OS_RdyListInit))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[f2]"></a>OS_RdyListInsert</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListInsert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = OS_RdyListInsert &rArr; OS_PrioInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInsert
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsertTail
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsertHead
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioInsert
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsertTail
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsertHead
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
 </UL>
 
-<P><STRONG><a name="[f2]"></a>OS_RdyListInsertHead</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListInsertHead))
+<P><STRONG><a name="[f3]"></a>OS_RdyListInsertHead</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListInsertHead))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_RdyListInsertHead
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
+<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
 </UL>
 
-<P><STRONG><a name="[cb]"></a>OS_RdyListInsertTail</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListInsertTail))
+<P><STRONG><a name="[cc]"></a>OS_RdyListInsertTail</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListInsertTail))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_RdyListInsertTail
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
 </UL>
 
-<P><STRONG><a name="[f3]"></a>OS_RdyListMoveHeadToTail</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListMoveHeadToTail))
+<P><STRONG><a name="[f4]"></a>OS_RdyListMoveHeadToTail</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, os_core.o(i.OS_RdyListMoveHeadToTail))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_RdyListMoveHeadToTail
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedRoundRobin
 </UL>
 
-<P><STRONG><a name="[cf]"></a>OS_RdyListRemove</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, os_core.o(i.OS_RdyListRemove))
+<P><STRONG><a name="[d0]"></a>OS_RdyListRemove</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, os_core.o(i.OS_RdyListRemove))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioRemove
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PrioRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskBlock
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskBlock
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 
-<P><STRONG><a name="[cd]"></a>OS_Sched0</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, os_core.o(i.OS_Sched0))
+<P><STRONG><a name="[ce]"></a>OS_Sched0</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, os_core.o(i.OS_Sched0))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = OS_Sched0
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 </UL>
 
-<P><STRONG><a name="[b5]"></a>OS_SchedLockTimeMeasStart</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_core.o(i.OS_SchedLockTimeMeasStart))
+<P><STRONG><a name="[b3]"></a>OS_SchedLockTimeMeasStart</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_core.o(i.OS_SchedLockTimeMeasStart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_SchedLockTimeMeasStart
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 </UL>
 
-<P><STRONG><a name="[b7]"></a>OS_SchedLockTimeMeasStop</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, os_core.o(i.OS_SchedLockTimeMeasStop))
+<P><STRONG><a name="[b5]"></a>OS_SchedLockTimeMeasStop</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, os_core.o(i.OS_SchedLockTimeMeasStop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_SchedLockTimeMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPend
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSuspend
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskSemPost
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskQPost
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SemPost
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_QPost
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagPost
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_StatTask
 </UL>
 
-<P><STRONG><a name="[e5]"></a>OS_SchedRoundRobin</STRONG> (Thumb, 218 bytes, Stack size 16 bytes, os_core.o(i.OS_SchedRoundRobin))
+<P><STRONG><a name="[e6]"></a>OS_SchedRoundRobin</STRONG> (Thumb, 218 bytes, Stack size 16 bytes, os_core.o(i.OS_SchedRoundRobin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = OS_SchedRoundRobin &rArr; CPU_IntDisMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListMoveHeadToTail
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListMoveHeadToTail
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
-</UL>
-
-<P><STRONG><a name="[ba]"></a>OS_SemDbgListAdd</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, os_sem.o(i.OS_SemDbgListAdd))
-<BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
 </UL>
 
-<P><STRONG><a name="[a9]"></a>OS_SemInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_sem.o(i.OS_SemInit))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<P><STRONG><a name="[bb]"></a>OS_SemDbgListAdd</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, os_sem.o(i.OS_SemDbgListAdd))
+<BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
 </UL>
 
-<P><STRONG><a name="[be]"></a>OS_SemPost</STRONG> (Thumb, 404 bytes, Stack size 56 bytes, os_sem.o(i.OS_SemPost))
+<P><STRONG><a name="[a8]"></a>OS_SemInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, os_sem.o(i.OS_SemInit))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+</UL>
+
+<P><STRONG><a name="[bf]"></a>OS_SemPost</STRONG> (Thumb, 404 bytes, Stack size 56 bytes, os_sem.o(i.OS_SemPost))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = OS_SemPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
+<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPost
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
 </UL>
 
 <P><STRONG><a name="[4f]"></a>OS_StatTask</STRONG> (Thumb, 878 bytes, Stack size 24 bytes, os_stat.o(i.OS_StatTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84 + Unknown Stack Size
 <LI>Call Chain = OS_StatTask &rArr; OSTimeDly &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskHook
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskStkChk
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskHook
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> os_stat.o(i.OS_StatTaskInit)
 </UL>
-<P><STRONG><a name="[ae]"></a>OS_StatTaskInit</STRONG> (Thumb, 136 bytes, Stack size 48 bytes, os_stat.o(i.OS_StatTaskInit))
+<P><STRONG><a name="[ad]"></a>OS_StatTaskInit</STRONG> (Thumb, 136 bytes, Stack size 48 bytes, os_stat.o(i.OS_StatTaskInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = OS_StatTaskInit &rArr; OSTaskCreate &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[e7]"></a>OS_TaskBlock</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, os_core.o(i.OS_TaskBlock))
+<P><STRONG><a name="[e8]"></a>OS_TaskBlock</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, os_core.o(i.OS_TaskBlock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = OS_TaskBlock &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListInsert
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
+<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListInsert
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Pend
 </UL>
 
-<P><STRONG><a name="[cc]"></a>OS_TaskDbgListAdd</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, os_task.o(i.OS_TaskDbgListAdd))
+<P><STRONG><a name="[cd]"></a>OS_TaskDbgListAdd</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, os_task.o(i.OS_TaskDbgListAdd))
 <BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 </UL>
 
-<P><STRONG><a name="[d4]"></a>OS_TaskDbgListRemove</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, os_task.o(i.OS_TaskDbgListRemove))
-<BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<P><STRONG><a name="[d5]"></a>OS_TaskDbgListRemove</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, os_task.o(i.OS_TaskDbgListRemove))
+<BR><BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 
-<P><STRONG><a name="[aa]"></a>OS_TaskInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, os_task.o(i.OS_TaskInit))
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<P><STRONG><a name="[a9]"></a>OS_TaskInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, os_task.o(i.OS_TaskInit))
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[c6]"></a>OS_TaskInitTCB</STRONG> (Thumb, 194 bytes, Stack size 16 bytes, os_task.o(i.OS_TaskInitTCB))
+<P><STRONG><a name="[c7]"></a>OS_TaskInitTCB</STRONG> (Thumb, 194 bytes, Stack size 16 bytes, os_task.o(i.OS_TaskInitTCB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OS_TaskInitTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQInit
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 
-<P><STRONG><a name="[d6]"></a>OS_TaskQPost</STRONG> (Thumb, 606 bytes, Stack size 40 bytes, os_task.o(i.OS_TaskQPost))
+<P><STRONG><a name="[d7]"></a>OS_TaskQPost</STRONG> (Thumb, 606 bytes, Stack size 40 bytes, os_task.o(i.OS_TaskQPost))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
 <LI>Call Chain = OS_TaskQPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQPut
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_MsgQPut
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
-<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskQPost
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
 </UL>
 
-<P><STRONG><a name="[e0]"></a>OS_TaskRdy</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, os_core.o(i.OS_TaskRdy))
+<P><STRONG><a name="[e1]"></a>OS_TaskRdy</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, os_core.o(i.OS_TaskRdy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = OS_TaskRdy &rArr; OS_RdyListInsert &rArr; OS_PrioInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListRemove
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListRemove
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagTaskRdy
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskResume
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_FlagTaskRdy
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
 </UL>
 
-<P><STRONG><a name="[d7]"></a>OS_TaskResume</STRONG> (Thumb, 374 bytes, Stack size 16 bytes, os_task.o(i.OS_TaskResume))
+<P><STRONG><a name="[d8]"></a>OS_TaskResume</STRONG> (Thumb, 374 bytes, Stack size 16 bytes, os_task.o(i.OS_TaskResume))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44 + Unknown Stack Size
 <LI>Call Chain = OS_TaskResume &rArr; OS_TaskRdy &rArr; OS_RdyListInsert &rArr; OS_PrioInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskResume
 </UL>
 
 <P><STRONG><a name="[4c]"></a>OS_TaskReturn</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, os_task.o(i.OS_TaskReturn))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
 <LI>Call Chain = OS_TaskReturn &rArr; OSTaskDel &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskReturnHook
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskReturnHook
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> os_cpu_c.o(i.OSTaskStkInit)
 </UL>
-<P><STRONG><a name="[e4]"></a>OS_TaskSemPost</STRONG> (Thumb, 1438 bytes, Stack size 32 bytes, os_task.o(i.OS_TaskSemPost))
+<P><STRONG><a name="[e5]"></a>OS_TaskSemPost</STRONG> (Thumb, 1438 bytes, Stack size 32 bytes, os_task.o(i.OS_TaskSemPost))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
 <LI>Call Chain = OS_TaskSemPost &rArr; OS_Post &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
 </UL>
 
-<P><STRONG><a name="[da]"></a>OS_TaskSuspend</STRONG> (Thumb, 392 bytes, Stack size 16 bytes, os_task.o(i.OS_TaskSuspend))
+<P><STRONG><a name="[db]"></a>OS_TaskSuspend</STRONG> (Thumb, 392 bytes, Stack size 16 bytes, os_task.o(i.OS_TaskSuspend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52 + Unknown Stack Size
 <LI>Call Chain = OS_TaskSuspend &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_RdyListRemove
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSched
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
-</UL>
-
-<P><STRONG><a name="[f7]"></a>OS_TickListInit</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, os_tick.o(i.OS_TickListInit))
-<BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTaskInit
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_IntQRePost
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSuspend
 </UL>
 
-<P><STRONG><a name="[db]"></a>OS_TickListInsert</STRONG> (Thumb, 430 bytes, Stack size 36 bytes, os_tick.o(i.OS_TickListInsert))
+<P><STRONG><a name="[f8]"></a>OS_TickListInit</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, os_tick.o(i.OS_TickListInit))
+<BR><BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTaskInit
+</UL>
+
+<P><STRONG><a name="[dc]"></a>OS_TickListInsert</STRONG> (Thumb, 430 bytes, Stack size 36 bytes, os_tick.o(i.OS_TickListInsert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = OS_TickListInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskBlock
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskBlock
 </UL>
 
-<P><STRONG><a name="[d0]"></a>OS_TickListRemove</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, os_tick.o(i.OS_TickListRemove))
+<P><STRONG><a name="[d1]"></a>OS_TickListRemove</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, os_tick.o(i.OS_TickListRemove))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OS_TickListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Post
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskDel
 </UL>
 
-<P><STRONG><a name="[c2]"></a>OS_TickListResetPeak</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, os_tick.o(i.OS_TickListResetPeak))
-<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<P><STRONG><a name="[c3]"></a>OS_TickListResetPeak</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, os_tick.o(i.OS_TickListResetPeak))
+<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
 </UL>
 
-<P><STRONG><a name="[f6]"></a>OS_TickListUpdate</STRONG> (Thumb, 520 bytes, Stack size 40 bytes, os_tick.o(i.OS_TickListUpdate))
+<P><STRONG><a name="[f7]"></a>OS_TickListUpdate</STRONG> (Thumb, 520 bytes, Stack size 40 bytes, os_tick.o(i.OS_TickListUpdate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
 <LI>Call Chain = OS_TickListUpdate &rArr; OS_PendListRemove &rArr; OS_PendListRemove1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListRemove
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListRemove
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TaskRdy
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_PendListRemove
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickTask
 </UL>
@@ -1998,54 +2046,54 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 124 + Unknown Stack Size
 <LI>Call Chain = OS_TickTask &rArr; OSTaskSemPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListUpdate
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> os_tick.o(i.OS_TickTaskInit)
 </UL>
-<P><STRONG><a name="[ad]"></a>OS_TickTaskInit</STRONG> (Thumb, 128 bytes, Stack size 48 bytes, os_tick.o(i.OS_TickTaskInit))
+<P><STRONG><a name="[ac]"></a>OS_TickTaskInit</STRONG> (Thumb, 128 bytes, Stack size 48 bytes, os_tick.o(i.OS_TickTaskInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = OS_TickTaskInit &rArr; OSTaskCreate &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListInit
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TickListInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[af]"></a>OS_TmrInit</STRONG> (Thumb, 206 bytes, Stack size 56 bytes, os_tmr.o(i.OS_TmrInit))
+<P><STRONG><a name="[ae]"></a>OS_TmrInit</STRONG> (Thumb, 206 bytes, Stack size 56 bytes, os_tmr.o(i.OS_TmrInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
 <LI>Call Chain = OS_TmrInit &rArr; OSTaskCreate &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
 </UL>
 
-<P><STRONG><a name="[f9]"></a>OS_TmrLink</STRONG> (Thumb, 196 bytes, Stack size 20 bytes, os_tmr.o(i.OS_TmrLink))
+<P><STRONG><a name="[fa]"></a>OS_TmrLink</STRONG> (Thumb, 196 bytes, Stack size 20 bytes, os_tmr.o(i.OS_TmrLink))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = OS_TmrLink
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrTask
 </UL>
 
-<P><STRONG><a name="[c3]"></a>OS_TmrResetPeak</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, os_tmr.o(i.OS_TmrResetPeak))
-<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
+<P><STRONG><a name="[c4]"></a>OS_TmrResetPeak</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, os_tmr.o(i.OS_TmrResetPeak))
+<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatReset
 </UL>
 
 <P><STRONG><a name="[51]"></a>OS_TmrTask</STRONG> (Thumb, 176 bytes, Stack size 16 bytes, os_tmr.o(i.OS_TmrTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124 + Unknown Stack Size
 <LI>Call Chain = OS_TmrTask &rArr; OSTaskSemPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrUnlink
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrLink
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrRd
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedUnlock
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSchedLock
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrUnlink
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrLink
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskSemPend
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> os_tmr.o(i.OS_TmrInit)
 </UL>
-<P><STRONG><a name="[f8]"></a>OS_TmrUnlink</STRONG> (Thumb, 72 bytes, Stack size 20 bytes, os_tmr.o(i.OS_TmrUnlink))
+<P><STRONG><a name="[f9]"></a>OS_TmrUnlink</STRONG> (Thumb, 72 bytes, Stack size 20 bytes, os_tmr.o(i.OS_TmrUnlink))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = OS_TmrUnlink
 </UL>
 <BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_TmrTask
@@ -2055,21 +2103,21 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 156 + Unknown Stack Size
 <LI>Call Chain = PowerManTask &rArr; OSSemPend &rArr; OS_Pend &rArr; OS_TaskBlock &rArr; OS_TickListInsert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
+<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemPend
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.AppTaskStart)
 </UL>
-<P><STRONG><a name="[75]"></a>Powermanage_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, powermanage.o(i.Powermanage_Init))
+<P><STRONG><a name="[74]"></a>Powermanage_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, powermanage.o(i.Powermanage_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = Powermanage_Init &rArr; DMA_Configuration &rArr; NVIC_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_SoftwareStartConvCmd
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Cmd
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_GPIO_Config
+<BR>[Calls]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_SoftwareStartConvCmd
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Cmd
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSSemCreate
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Configuration
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_GPIO_Config
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AllAdcInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
@@ -2081,47 +2129,37 @@ Global Symbols
 
 <P><STRONG><a name="[5a]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AllAdcInit
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
 </UL>
 
 <P><STRONG><a name="[59]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_GPIO_Config
+<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_GPIO_Config
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_GPIO_Config
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AllAdcInit
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_GPIO_Config
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
 </UL>
 
 <P><STRONG><a name="[57]"></a>RCC_APB2PeriphResetCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DeInit
 </UL>
 
-<P><STRONG><a name="[73]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 192 bytes, Stack size 12 bytes, stm32f10x_rcc.o(i.RCC_GetClocksFreq))
+<P><STRONG><a name="[72]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 192 bytes, Stack size 12 bytes, stm32f10x_rcc.o(i.RCC_GetClocksFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = RCC_GetClocksFreq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_CPU_ClkFreq
 </UL>
 
-<P><STRONG><a name="[fd]"></a>SRAM_Init</STRONG> (Thumb, 240 bytes, Stack size 96 bytes, exram.o(i.SRAM_Init))
+<P><STRONG><a name="[fe]"></a>SRAM_Init</STRONG> (Thumb, 240 bytes, Stack size 96 bytes, exram.o(i.SRAM_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = SRAM_Init &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FSMC_NORSRAMInit
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FSMC_NORSRAMCmd
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FSMC_NORSRAMInit
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FSMC_NORSRAMCmd
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[6d]"></a>SRAM_ReadBuffer</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, exram.o(i.SRAM_ReadBuffer))
-<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
-</UL>
-
-<P><STRONG><a name="[71]"></a>SRAM_WriteBuffer</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, exram.o(i.SRAM_WriteBuffer))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SRAM_WriteBuffer
-</UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AppTaskStart
 </UL>
 
 <P><STRONG><a name="[6]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.SVC_Handler))
@@ -2130,60 +2168,67 @@ Global Symbols
 <P><STRONG><a name="[47]"></a>SystemInit</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SystemInit &rArr; SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(.text)
 </UL>
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_xl.o(RESET)
 </UL>
-<P><STRONG><a name="[10f]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[110]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[110]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[111]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[111]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[112]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 72 bytes, Stack size 48 bytes, app.o(i.main))
+<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 288 bytes, Stack size 48 bytes, app.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224 + Unknown Stack Size
 <LI>Call Chain = main &rArr; OSInit &rArr; OS_TmrInit &rArr; OSTaskCreate &rArr; OSSched &rArr; OS_PrioGetHighest
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
+<BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_Init
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStop
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_SchedLockTimeMeasStart
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_Sched0
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStart
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemCreate
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSInit
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL><P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[100]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))
+<P><STRONG><a name="[101]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
 </UL>
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[101]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x.o(i.SetSysClockTo72))
+<P><STRONG><a name="[102]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x.o(i.SetSysClockTo72))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClockTo72
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 
-<P><STRONG><a name="[52]"></a>AppTaskStart</STRONG> (Thumb, 226 bytes, Stack size 40 bytes, app.o(i.AppTaskStart))
+<P><STRONG><a name="[52]"></a>AppTaskStart</STRONG> (Thumb, 202 bytes, Stack size 40 bytes, app.o(i.AppTaskStart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148 + Unknown Stack Size
 <LI>Call Chain = AppTaskStart &rArr; OSStatTaskCPUUsageInit &rArr; OSTaskSuspend &rArr; OS_TaskSuspend &rArr; OS_RdyListRemove &rArr; OS_PrioRemove
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadOutputDataBit
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_WriteBuffer
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SRAM_ReadBuffer
+<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadOutputDataBit
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OS_CPU_SysTickInit
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTimeDly
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSTaskCreate
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSStatTaskCPUUsageInit
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OSMemGet
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Mem_Init
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurReset
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_Init
@@ -2192,13 +2237,13 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app.o(i.main)
 </UL>
-<P><STRONG><a name="[9e]"></a>LED_GPIO_Config</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, bsp_led.o(i.LED_GPIO_Config))
+<P><STRONG><a name="[9d]"></a>LED_GPIO_Config</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, bsp_led.o(i.LED_GPIO_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = LED_GPIO_Config &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
+<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
 </UL>
 
 <P><STRONG><a name="[58]"></a>AllAdcInit</STRONG> (Thumb, 198 bytes, Stack size 32 bytes, powermanage.o(i.AllAdcInit))
@@ -2218,62 +2263,62 @@ Local Symbols
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ADCCLKConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
 </UL>
 
-<P><STRONG><a name="[fa]"></a>Powermanage_GPIO_Config</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, powermanage.o(i.Powermanage_GPIO_Config))
+<P><STRONG><a name="[fb]"></a>Powermanage_GPIO_Config</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, powermanage.o(i.Powermanage_GPIO_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Powermanage_GPIO_Config &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Powermanage_Init
 </UL>
 
-<P><STRONG><a name="[9a]"></a>Keys_GPIO_Config</STRONG> (Thumb, 442 bytes, Stack size 24 bytes, keys.o(i.Keys_GPIO_Config))
+<P><STRONG><a name="[99]"></a>Keys_GPIO_Config</STRONG> (Thumb, 442 bytes, Stack size 24 bytes, keys.o(i.Keys_GPIO_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = Keys_GPIO_Config &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_EXTILineConfig
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_EXTILineConfig
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_Init
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Keys_Init
 </UL>
 
-<P><STRONG><a name="[78]"></a>CPU_IntDisMeasInit</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, cpu_core.o(i.CPU_IntDisMeasInit))
+<P><STRONG><a name="[77]"></a>CPU_IntDisMeasInit</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, cpu_core.o(i.CPU_IntDisMeasInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = CPU_IntDisMeasInit &rArr; CPU_IntDisMeasStop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Save
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_SR_Restore
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStop
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasStart
 </UL>
 <BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_Init
 </UL>
 
-<P><STRONG><a name="[7f]"></a>CPU_IntDisMeasMaxCalc</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, cpu_core.o(i.CPU_IntDisMeasMaxCalc))
-<BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
+<P><STRONG><a name="[7e]"></a>CPU_IntDisMeasMaxCalc</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, cpu_core.o(i.CPU_IntDisMeasMaxCalc))
+<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxGet
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_IntDisMeasMaxCurGet
 </UL>
 
-<P><STRONG><a name="[79]"></a>CPU_NameInit</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_NameInit))
+<P><STRONG><a name="[78]"></a>CPU_NameInit</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_NameInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52 + Unknown Stack Size
 <LI>Call Chain = CPU_NameInit &rArr; CPU_NameClr &rArr; Mem_Clr &rArr; Mem_Set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
+<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_NameClr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_Init
 </UL>
 
-<P><STRONG><a name="[77]"></a>CPU_TS_Init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_TS_Init))
+<P><STRONG><a name="[76]"></a>CPU_TS_Init</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, cpu_core.o(i.CPU_TS_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = CPU_TS_Init &rArr; CPU_TS_TmrInit &rArr; BSP_CPU_ClkFreq &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrInit
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_TS_TmrInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_Init
 </UL>

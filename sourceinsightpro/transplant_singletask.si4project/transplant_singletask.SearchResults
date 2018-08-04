@@ -1,35 +1,103 @@
----- OS_CFG_ISR_POST_DEFERRED_EN Matches (34 in 12 files) ----
-os.h (User\uCOS-III\Source) line 87 : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u                             /* Deferred ISR Posts ------------------------------ */
-os.h (User\uCOS-III\Source) line 701 : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os.h (User\uCOS-III\Source) line 1128 : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os.h (User\uCOS-III\Source) line 1316 : #if (OS_CFG_ISR_POST_DEFERRED_EN > 0u)
-os.h (User\uCOS-III\Source) line 1995 : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os.h (User\uCOS-III\Source) line 2080 : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os_cfg.h (User\APP) line 38 : #define OS_CFG_ISR_POST_DEFERRED_EN     1u   /* Enable (1) or Disable (0) Deferred ISR posts                          */
-os_cfg_app.c (User\uCOS-III\Source) line 57 : #if (OS_CFG_ISR_POST_DEFERRED_EN > 0u)
-os_cfg_app.c (User\uCOS-III\Source) line 95 : #if (OS_CFG_ISR_POST_DEFERRED_EN > 0u)
-os_cfg_app.c (User\uCOS-III\Source) line 196 : #if (OS_CFG_ISR_POST_DEFERRED_EN > 0u)
-OSCfg_Init in os_cfg_app.c (User\uCOS-III\Source) : #if (OS_CFG_ISR_POST_DEFERRED_EN > 0u)
-OSInit in os_core.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os_core.c (User\uCOS-III\Source) line 2437 : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os_dbg.c (User\uCOS-III\Source) line 73 : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os_dbg.c (User\uCOS-III\Source) line 79 : CPU_INT08U  const  OSDbg_ISRPostDeferredEn     = OS_CFG_ISR_POST_DEFERRED_EN;
-os_dbg.c (User\uCOS-III\Source) line 237 : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OS_Dbg_Init in os_dbg.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSFlagPost in os_flag.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os_int.c (User\uCOS-III\Source) line 41 : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSQPost in os_q.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSSemPost in os_sem.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSStatReset in os_stat.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSTaskChangePrio in os_task.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os_task.c (User\uCOS-III\Source) line 235 : *                                                                if OS_CFG_ISR_POST_DEFERRED_EN is set to 1 and you tried
-OSTaskCreate in os_task.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSTaskDel in os_task.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSTaskQPost in os_task.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os_task.c (User\uCOS-III\Source) line 1190 : #if (OS_CFG_ISR_POST_DEFERRED_EN   == 0u) && \
-OSTaskResume in os_task.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSTaskSemPost in os_task.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-os_task.c (User\uCOS-III\Source) line 1748 : #if (OS_CFG_ISR_POST_DEFERRED_EN   == 0u) && \
-OSTaskSuspend in os_task.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSTimeTick in os_time.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
-OSTimeTick in os_time.c (User\uCOS-III\Source) : #if OS_CFG_ISR_POST_DEFERRED_EN > 0u
+---- CPU_SR_ALLOC Matches (102 in 22 files) ----
+cpu.h (User\uC-CPU\ARM-Cortex-M3\RealView) line 277 : *                   (1) 'cpu_sr' local variable SHOULD be declared via the CPU_SR_ALLOC() macro which, if 
+cpu.h (User\uC-CPU\ARM-Cortex-M3\RealView) line 287 : *                               CPU_SR_ALLOC();         MUST be declared after ALL other local variables
+cpu.h (User\uC-CPU\ARM-Cortex-M3\RealView) line 304 : #define  CPU_SR_ALLOC()             CPU_SR  cpu_sr = (CPU_SR)0
+cpu.h (User\uC-CPU\ARM-Cortex-M3\RealView) line 306 : #define  CPU_SR_ALLOC()
+cpu_a.asm (User\uC-CPU\ARM-Cortex-M3\RealView) line 100 : ;                           CPU_SR_ALLOC();                     /* Allocate storage for CPU status register */
+CPU_IntSrcDis in cpu_c.c (User\uC-CPU\ARM-Cortex-M3\RealView) :     CPU_SR_ALLOC();
+CPU_IntSrcEn in cpu_c.c (User\uC-CPU\ARM-Cortex-M3\RealView) :     CPU_SR_ALLOC();
+CPU_IntSrcPendClr in cpu_c.c (User\uC-CPU\ARM-Cortex-M3\RealView) :     CPU_SR_ALLOC();
+CPU_IntSrcPrioSet in cpu_c.c (User\uC-CPU\ARM-Cortex-M3\RealView) :     CPU_SR_ALLOC();
+CPU_IntSrcPrioGet in cpu_c.c (User\uC-CPU\ARM-Cortex-M3\RealView) :     CPU_SR_ALLOC();
+CPU_NameClr in cpu_core.c (User\uC-CPU) :     CPU_SR_ALLOC();
+CPU_NameGet in cpu_core.c (User\uC-CPU) :     CPU_SR_ALLOC();
+CPU_NameSet in cpu_core.c (User\uC-CPU) :     CPU_SR_ALLOC();
+CPU_TS_Get32 in cpu_core.c (User\uC-CPU) :     CPU_SR_ALLOC();
+CPU_TS_Get64 in cpu_core.c (User\uC-CPU) :     CPU_SR_ALLOC();
+CPU_IntDisMeasMaxCurReset in cpu_core.c (User\uC-CPU) :     CPU_SR_ALLOC();
+CPU_IntDisMeasMaxCurGet in cpu_core.c (User\uC-CPU) :     CPU_SR_ALLOC();
+CPU_IntDisMeasMaxGet in cpu_core.c (User\uC-CPU) :     CPU_SR_ALLOC();
+CPU_IntDisMeasInit in cpu_core.c (User\uC-CPU) :     CPU_SR_ALLOC();
+cpu_def.h (User\uC-CPU) line 183 : *                   (1) 'cpu_sr' local variable SHOULD be declared via the CPU_SR_ALLOC() macro which, 
+cpu_def.h (User\uC-CPU) line 194 : *                               CPU_SR_ALLOC();         MUST be declared after ALL other local variables
+Math_RandSetSeed in lib_math.c (User\uC-LIB) :     CPU_SR_ALLOC();
+Math_Rand in lib_math.c (User\uC-LIB) :     CPU_SR_ALLOC();
+Mem_HeapAlloc in lib_mem.c (User\uC-LIB) :     CPU_SR_ALLOC();
+Mem_SegGetSizeRem in lib_mem.c (User\uC-LIB) :     CPU_SR_ALLOC();
+Mem_PoolCreate in lib_mem.c (User\uC-LIB) :     CPU_SR_ALLOC();
+Mem_PoolBlkGetNbrAvail in lib_mem.c (User\uC-LIB) :     CPU_SR_ALLOC();
+Mem_PoolBlkGet in lib_mem.c (User\uC-LIB) :     CPU_SR_ALLOC();
+Mem_PoolBlkGetUsedAtIx in lib_mem.c (User\uC-LIB) :     CPU_SR_ALLOC();
+Mem_PoolBlkFree in lib_mem.c (User\uC-LIB) :     CPU_SR_ALLOC();
+Mem_PoolBlkIxGet in lib_mem.c (User\uC-LIB) :     CPU_SR_ALLOC();
+App_OS_SetAllHooks in os_app_hooks.c (User\APP) :     CPU_SR_ALLOC();
+App_OS_ClrAllHooks in os_app_hooks.c (User\APP) :     CPU_SR_ALLOC();
+OSIntExit in os_core.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSched in os_core.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSchedLock in os_core.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSchedUnlock in os_core.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSchedRoundRobinCfg in os_core.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSchedRoundRobinYield in os_core.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_IdleTask in os_core.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_Sched0 in os_core.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_SchedRoundRobin in os_core.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_CPU_SysTickHandler in os_cpu_c.c (User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView) :     CPU_SR_ALLOC();
+OSFlagCreate in os_flag.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSFlagDel in os_flag.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSFlagPend in os_flag.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSFlagPendAbort in os_flag.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSFlagPendGetFlagsRdy in os_flag.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_FlagPost in os_flag.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_IntQPost in os_int.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_IntQTask in os_int.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSMemCreate in os_mem.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSMemGet in os_mem.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSMemPut in os_mem.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSMutexCreate in os_mutex.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSMutexDel in os_mutex.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSMutexPend in os_mutex.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSMutexPendAbort in os_mutex.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSMutexPost in os_mutex.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSPendMulti in os_pend_multi.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSQCreate in os_q.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSQDel in os_q.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSQFlush in os_q.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSQPend in os_q.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSQPendAbort in os_q.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_QPost in os_q.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSemCreate in os_sem.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSemDel in os_sem.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSemPend in os_sem.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSemPendAbort in os_sem.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSSemSet in os_sem.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_SemPost in os_sem.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSStatReset in os_stat.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSStatTaskCPUUsageInit in os_stat.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_StatTask in os_stat.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskChangePrio in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskCreate in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskDel in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskQFlush in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskQPend in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskQPendAbort in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskRegGet in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskRegGetID in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskRegSet in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskResume in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskSemPend in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskSemPendAbort in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskSemSet in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskStkChk in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTaskTimeQuantaSet in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_TaskQPost in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_TaskResume in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_TaskSemPost in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_TaskSuspend in os_task.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OS_TickListUpdate in os_tick.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTimeDly in os_time.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTimeDlyHMSM in os_time.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTimeDlyResume in os_time.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTimeGet in os_time.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTimeSet in os_time.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTmrCreate in os_tmr.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();
+OSTmrStateGet in os_tmr.c (User\uCOS-III\Source) :     CPU_SR_ALLOC();

@@ -230,6 +230,8 @@ static void AppTaskStart(void * p_arg)
 		{ /* Task body, always written as an infinite loop. 	  */
 
 		macLED1_TOGGLE();
+		count1 = (CPU_INT32U)OSMemGet (&INTERNAL_MEM,
+                 &err);
 
 		count++;
 

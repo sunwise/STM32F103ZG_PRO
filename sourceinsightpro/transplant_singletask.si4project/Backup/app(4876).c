@@ -169,7 +169,7 @@ int main(void)
 *********************************************************************************************************
 */
 CPU_INT16U		count = 0;
-CPU_INT32U		count1 = 0;
+CPU_INT16U		count1 = 0;
 
 
 static void AppTaskStart(void * p_arg)
@@ -233,7 +233,7 @@ static void AppTaskStart(void * p_arg)
 
 		count++;
 
-		OSTimeDly(500, OS_OPT_TIME_DLY, &err);
+		OSTimeDly(1000, OS_OPT_TIME_DLY, &err);
 		}
 
 
