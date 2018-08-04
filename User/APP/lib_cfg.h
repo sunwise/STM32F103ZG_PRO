@@ -117,7 +117,7 @@
                                                         /*   DEF_ENABLED      Memory allocation ENABLED                 */
 
 
-#define  LIB_MEM_CFG_HEAP_SIZE          27u * 1024u     /* Configure heap memory size         [see Note #2a].           */
+#define  LIB_MEM_CFG_HEAP_SIZE          27u * 1024u     /* Configure heap memory size         [see Note #2a].27           */
 
 #if 0                                                   /* Configure heap memory base address (see Note #2b).           */
 #define  LIB_MEM_CFG_HEAP_BASE_ADDR       0x00000000u

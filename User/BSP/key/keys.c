@@ -15,7 +15,7 @@ OS_TCB			KeyDealTaskTCB;
 *												 STACKS
 *********************************************************************************************************
 */
-CPU_STK 		KeyDealTaskStk[APP_TASK_START_STK_SIZE];
+CPU_STK 		KeyDealTaskStk[KEY_DEAL_TASK_STK_SIZE];
 
 
 /*

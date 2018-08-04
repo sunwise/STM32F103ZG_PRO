@@ -162,6 +162,20 @@ static void AppTaskStart(void * p_arg)
 			(OS_OPT) (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
 			(OS_ERR *) &err);
 
+	OSTaskCreate((OS_TCB *) &PowerManTaskTCB,		/* Create the start task								*/
+		(CPU_CHAR *) "powermanage", 
+			(OS_TASK_PTR) PowerManTask, 
+			(void *) 0, 
+			(OS_PRIO) POWER_MAN_TASK_PRIO, 
+			(CPU_STK *) &PowerManTaskStk[0], 
+			(CPU_STK_SIZE) POWER_MAN_TASK_STK_SIZE / 10, 
+			(CPU_STK_SIZE) POWER_MAN_TASK_STK_SIZE, 
+			(OS_MSG_QTY) 0u, 
+			(OS_TICK) 0u, 
+			(void *) 0, 
+			(OS_OPT) (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
+			(OS_ERR *) &err);
+
 
 	while (DEF_TRUE)
 		{ /* Task body, always written as an infinite loop. 	  */

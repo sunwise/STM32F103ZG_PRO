@@ -56,7 +56,7 @@ extern OS_TCB	KeyDealTaskTCB;
 *												 STACKS
 *********************************************************************************************************
 */
-extern CPU_STK	KeyDealTaskStk[APP_TASK_START_STK_SIZE];
+extern CPU_STK	KeyDealTaskStk[KEY_DEAL_TASK_STK_SIZE];
 
 
 /*

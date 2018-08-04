@@ -48,7 +48,9 @@
 */
 
 #define  APP_TASK_START_PRIO                        2
-#define  KEY_DEAL_TASK_PRIO                         4
+#define  KEY_DEAL_TASK_PRIO                         3
+#define  POWER_MAN_TASK_PRIO                        9
+
 
 
 
@@ -61,6 +63,8 @@
 
 #define  APP_TASK_START_STK_SIZE                    128
 #define  KEY_DEAL_TASK_STK_SIZE                     128
+#define  POWER_MAN_TASK_STK_SIZE                    128
+
 
 
 /*

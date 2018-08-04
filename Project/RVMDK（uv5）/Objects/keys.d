@@ -50,8 +50,8 @@
 .\objects\keys.o: ..\..\User\BSP\led\bsp_led.h
 .\objects\keys.o: ..\..\User\BSP\PowerManage\PowerManage.h
 .\objects\keys.o: ..\..\User\APP\includes.h
-.\objects\keys.o: ..\..\User\BSP\key\keys.h
 .\objects\keys.o: ..\..\User\uCOS-III\Source\os.h
 .\objects\keys.o: ..\..\User\APP\os_cfg.h
 .\objects\keys.o: ..\..\User\uCOS-III\Source\os_type.h
 .\objects\keys.o: ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h
+.\objects\keys.o: ..\..\User\BSP\key\keys.h

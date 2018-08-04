@@ -51,8 +51,8 @@
 .\objects\stm32f10x_it.o: ..\..\User\BSP\led\bsp_led.h
 .\objects\stm32f10x_it.o: ..\..\User\BSP\PowerManage\PowerManage.h
 .\objects\stm32f10x_it.o: ..\..\User\APP\includes.h
-.\objects\stm32f10x_it.o: ..\..\User\BSP\key\keys.h
 .\objects\stm32f10x_it.o: ..\..\User\uCOS-III\Source\os.h
 .\objects\stm32f10x_it.o: ..\..\User\APP\os_cfg.h
 .\objects\stm32f10x_it.o: ..\..\User\uCOS-III\Source\os_type.h
 .\objects\stm32f10x_it.o: ..\..\User\uCOS-III\Ports\ARM-Cortex-M3\Generic\RealView\os_cpu.h
+.\objects\stm32f10x_it.o: ..\..\User\BSP\key\keys.h
